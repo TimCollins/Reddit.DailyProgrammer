@@ -44,7 +44,7 @@ namespace SemanticVersionSort
             List<SemanticVersionEntity> inputData = GetTestData();
 
             // Sort it
-            List<SemanticVersionEntity> sortedData = DoSemanticVersionSort(inputData);
+            List<SemanticVersionEntity> sortedData = SemanticVersionSorter.Sort(inputData);
 
             // Output it
             ShowDetails(sortedData);
@@ -58,29 +58,6 @@ namespace SemanticVersionSort
             {
                 Console.WriteLine("{0}: {1}", i + 1, sortedData[i]);
             }
-        }
-
-        private static List<SemanticVersionEntity> DoSemanticVersionSort(List<SemanticVersionEntity> source)
-        {
-            // Initial (probably awful) implementation of a bubble sort
-            // Loop through each element.
-            // Compare it against each of the others using the sorting rules above, 
-            // Swapping the elements as needed.
-
-            for (int i = source.Count - 1; i > 0; i--)
-            {
-                for (int j = 0; j < i; j++)
-                {
-                    if (source[j + 1] < source[j])
-                    {
-                        var tmp = source[j + 1];
-                        source[j + 1] = source[j];
-                        source[j] = tmp;
-                    }
-                }
-            }
-
-            return source;
         }
 
         private static List<SemanticVersionEntity> GetTestData()

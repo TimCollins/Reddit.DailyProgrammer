@@ -12,10 +12,15 @@ namespace SemanticVersionSort
                 throw new ArgumentException("source");
             }
 
+            if (source.Count == 1)
+            {
+                return source;
+            }
+
             // Initial (probably awful) implementation of a bubble sort
             // Loop through each element.
-            // Compare it against each of the others using the sorting rules above, 
-            // Swapping the elements as needed.
+            // Compare it against each of the others.
+            // Swap the elements as needed.
 
             for (int i = source.Count - 1; i > 0; i--)
             {

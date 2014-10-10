@@ -8,7 +8,7 @@ namespace SemanticVersionSort
         public int Minor { get; set; }
         public int Patch { get; set; }
         public string Label { get; set; }
-        public string MetaData { get; set; }
+        public string Metadata { get; set; }
 
         public static bool operator <(SemanticVersionEntity first, SemanticVersionEntity second)
         {
@@ -26,14 +26,29 @@ namespace SemanticVersionSort
                 return true;
             }
 
+            if (first.Major > second.Major)
+            {
+                return false;
+            }
+
             if (first.Minor < second.Minor)
             {
                 return true;
+            }
+            
+            if (first.Minor > second.Minor)
+            {
+                return false;
             }
 
             if (first.Patch < second.Patch)
             {
                 return true;
+            }
+
+            if (first.Patch > second.Patch)
+            {
+                return false;
             }
 
             return !string.IsNullOrEmpty(first.Label);
@@ -69,9 +84,9 @@ namespace SemanticVersionSort
                 output.Append(string.Format("-{0}", Label));
             }
 
-            if (!string.IsNullOrEmpty(MetaData))
+            if (!string.IsNullOrEmpty(Metadata))
             {
-                output.Append(string.Format("+{0}", MetaData));
+                output.Append(string.Format("+{0}", Metadata));
             }
 
             return output.ToString();

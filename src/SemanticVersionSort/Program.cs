@@ -62,16 +62,6 @@ namespace SemanticVersionSort
 
         private static List<SemanticVersionEntity> GetTestData()
         {
-            // Sample input:
-            //7
-            //2.0.11-alpha
-            //0.1.7+amd64
-            //0.10.7+20141005
-            //2.0.12+i386
-            //1.2.34
-            //2.0.11+i386
-            //20.1.1+i386
-
             return new List<SemanticVersionEntity>
             {
                 new SemanticVersionEntity
@@ -80,11 +70,51 @@ namespace SemanticVersionSort
                 },
                 new SemanticVersionEntity
                 {
-                    // Should be displayed as 2.0.11-alpha
                     Major = 2,
                     Minor = 0,
                     Patch = 11,
                     Label = "alpha"
+                },
+                new SemanticVersionEntity
+                {
+                    Major = 0,
+                    Minor = 1,
+                    Patch = 7,
+                    Label = "amd64"
+                },
+                new SemanticVersionEntity
+                {
+                    Major = 0,
+                    Minor = 10,
+                    Patch = 7,
+                    Label = "20141005"
+                },
+                new SemanticVersionEntity
+                {
+                    Major = 2,
+                    Minor = 0,
+                    Patch = 12,
+                    Label = "i386"
+                },
+                new SemanticVersionEntity
+                {
+                    Major = 1,
+                    Minor = 2,
+                    Patch = 34
+                },
+                new SemanticVersionEntity
+                {
+                    Major = 2,
+                    Minor = 0,
+                    Patch = 11,
+                    Label = "i386"
+                },
+                new SemanticVersionEntity
+                {
+                    Major = 20,
+                    Minor = 1,
+                    Patch = 1,
+                    Label = "i386"
                 }
             };
         }

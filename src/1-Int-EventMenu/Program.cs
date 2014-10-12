@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace _1_Int_EventMenu
 {
@@ -66,7 +67,7 @@ namespace _1_Int_EventMenu
             Console.Write("Enter ID of event to delete: ");
             int id = Convert.ToInt32(Console.ReadLine());
 
-            Events.RemoveAt(id);
+            Events.RemoveAll(e => e.ID == id);
 
             Console.WriteLine("Event deleted.");
         }
@@ -79,11 +80,32 @@ namespace _1_Int_EventMenu
                 return;
             }
 
+            ShowEventsDetails();
+
             Console.Write("Enter ID of event to edit: ");
             int id = Convert.ToInt32(Console.ReadLine());
 
-            Events.RemoveAt(id);
+            Event eventToEdit = Events.First(e => e.ID == id);
 
+            Events.RemoveAll(e => e.ID == id);
+
+            GetEventDetails(eventToEdit);
+            Events.Add(eventToEdit);
+        }
+
+        private static void GetEventDetails(Event e)
+        {
+            Console.Write("Enter event name: ");
+            e.Name = Console.ReadLine();
+
+            Console.Write("Enter event date (dd/mm/yyyy): ");
+            string date = Console.ReadLine();
+
+            Console.Write("Enter event start time hour (0-23): ");
+            string hour = Console.ReadLine();
+
+            // Make a date out of the two strings.
+            e.Date = ParseStringsAsDate(date, hour);
         }
 
         private static void ViewEvents()
@@ -96,17 +118,17 @@ namespace _1_Int_EventMenu
 
             Console.WriteLine("\nThere are {0} events in the system.", Events.Count);
 
+            ShowEventsDetails();
+        }
+
+        private static void ShowEventsDetails()
+        {
             foreach (Event e in Events)
             {
-                ShowEventDetails(e);
+                Console.WriteLine("ID: {0}, Name: {1}, Date: {2}", e.ID, e.Name, e.Date);
             }
 
             Console.WriteLine("\n");
-        }
-
-        private static void ShowEventDetails(Event e)
-        {
-            Console.WriteLine("ID: {0}, Name: {1}, Date: {2}", e.ID, e.Name, e.Date);
         }
 
         private static void CreateEvent()

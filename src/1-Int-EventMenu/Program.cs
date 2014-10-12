@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace _1_Int_EventMenu
 {
@@ -13,12 +12,10 @@ namespace _1_Int_EventMenu
     /// </summary>
     class Program
     {
-        public static List<Event> Events; 
-
         static void Main(string[] args)
         {
             int input = -1;
-            Events = new List<Event>(); 
+            EventController.Events = new List<Event>(); 
 
             while (input != 0)
             {
@@ -39,16 +36,16 @@ namespace _1_Int_EventMenu
                     Environment.Exit(0);
                     break;
                 case 1:
-                    CreateEvent();
+                    EventController.CreateEvent();
                     break;
                 case 2:
-                    ViewEvents();
+                    EventController.ViewEvents();
                     break;
                 case 3:
-                    EditEvent();
+                    EventController.EditEvent();
                     break;
                 case 4:
-                    DeleteEvent();
+                    EventController.DeleteEvent();
                     break;
                 default:
                     Console.WriteLine("{0} is an unsupported option. Please try again.", input);
@@ -56,112 +53,7 @@ namespace _1_Int_EventMenu
             }
         }
 
-        private static void DeleteEvent()
-        {
-            if (Events.Count == 0)
-            {
-                Console.WriteLine("\nThere are no events in the system yet.");
-                return;
-            }
 
-            Console.Write("Enter ID of event to delete: ");
-            int id = Convert.ToInt32(Console.ReadLine());
-
-            Events.RemoveAll(e => e.ID == id);
-
-            Console.WriteLine("Event deleted.");
-        }
-
-        private static void EditEvent()
-        {
-            if (Events.Count == 0)
-            {
-                Console.WriteLine("\nThere are no events in the system yet.");
-                return;
-            }
-
-            ShowEventsDetails();
-
-            Console.Write("Enter ID of event to edit: ");
-            int id = Convert.ToInt32(Console.ReadLine());
-
-            Event eventToEdit = Events.First(e => e.ID == id);
-
-            Events.RemoveAll(e => e.ID == id);
-
-            GetEventDetails(eventToEdit);
-            Events.Add(eventToEdit);
-        }
-
-        private static void GetEventDetails(Event e)
-        {
-            Console.Write("Enter event name: ");
-            e.Name = Console.ReadLine();
-
-            Console.Write("Enter event date (dd/mm/yyyy): ");
-            string date = Console.ReadLine();
-
-            Console.Write("Enter event start time hour (0-23): ");
-            string hour = Console.ReadLine();
-
-            // Make a date out of the two strings.
-            e.Date = ParseStringsAsDate(date, hour);
-        }
-
-        private static void ViewEvents()
-        {
-            if (Events.Count == 0)
-            {
-                Console.WriteLine("\nThere are no events in the system yet.");
-                return;
-            }
-
-            Console.WriteLine("\nThere are {0} events in the system.", Events.Count);
-
-            ShowEventsDetails();
-        }
-
-        private static void ShowEventsDetails()
-        {
-            foreach (Event e in Events)
-            {
-                Console.WriteLine("ID: {0}, Name: {1}, Date: {2}", e.ID, e.Name, e.Date);
-            }
-
-            Console.WriteLine("\n");
-        }
-
-        private static void CreateEvent()
-        {
-            Console.WriteLine("Creating a new event.");
-            
-            Event e = new Event
-            {
-                ID = Events.Count + 1
-            };
-
-            Console.Write("Enter event name: ");
-            e.Name = Console.ReadLine();
-
-            Console.Write("Enter event date (dd/mm/yyyy): ");
-            string date = Console.ReadLine();
-
-            Console.Write("Enter event start time hour (0-23): ");
-            string hour = Console.ReadLine();
-
-            // Make a date out of the two strings.
-            e.Date = ParseStringsAsDate(date, hour);
-
-            Events.Add(e);
-        }
-
-        private static DateTime ParseStringsAsDate(string date, string hour)
-        {
-            string[] parts = date.Split('/');
-            DateTime d = new DateTime(Convert.ToInt32(parts[2]), Convert.ToInt32(parts[1]), Convert.ToInt32(parts[0]), Convert.ToInt32(hour), 0, 0);
-
-            return d;
-        }
 
         private static void DisplayMenu()
         {
@@ -177,10 +69,5 @@ namespace _1_Int_EventMenu
         {
             Console.Write("> ");
         }
-        
     }
-
-        
-
-
 }

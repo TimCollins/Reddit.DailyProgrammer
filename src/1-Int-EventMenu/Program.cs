@@ -22,7 +22,10 @@ namespace _1_Int_EventMenu
             while (input != 0)
             {
                 DisplayMenu();
-                input = Convert.ToInt32(Console.ReadLine());
+                DisplayPrompt();
+
+                ConsoleKeyInfo cki = Console.ReadKey(true);                
+                input = Convert.ToInt32(cki.KeyChar) - 48;
                 ParseInput(input);
             }
         }
@@ -47,13 +50,18 @@ namespace _1_Int_EventMenu
                     DeleteEvent();
                     break;
                 default:
-                    throw new ArgumentException("input");
+                    Console.WriteLine("{0} is an unsupported option. Please try again.", input);
+                    break;
             }
         }
 
         private static void DeleteEvent()
         {
-            ViewEvents();
+            if (Events.Count == 0)
+            {
+                Console.WriteLine("\nThere are no events in the system yet.");
+                return;
+            }
 
             Console.Write("Enter ID of event to delete: ");
             int id = Convert.ToInt32(Console.ReadLine());
@@ -65,7 +73,11 @@ namespace _1_Int_EventMenu
 
         private static void EditEvent()
         {
-            ViewEvents();
+            if (Events.Count == 0)
+            {
+                Console.WriteLine("\nThere are no events in the system yet.");
+                return;
+            }
 
             Console.Write("Enter ID of event to edit: ");
             int id = Convert.ToInt32(Console.ReadLine());
@@ -78,7 +90,7 @@ namespace _1_Int_EventMenu
         {
             if (Events.Count == 0)
             {
-                Console.WriteLine("There are no events in the system yet.");
+                Console.WriteLine("\nThere are no events in the system yet.");
                 return;
             }
 
@@ -139,6 +151,10 @@ namespace _1_Int_EventMenu
                               "0 - Exit Program");
         }
 
+        private static void DisplayPrompt()
+        {
+            Console.Write("> ");
+        }
         
     }
 

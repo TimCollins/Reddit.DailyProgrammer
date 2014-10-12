@@ -4,11 +4,11 @@ using System.Linq;
 
 namespace _1_Int_EventMenu
 {
-    class EventController
+    public class EventController
     {
         public static List<Event> Events;
 
-        internal static void CreateEvent()
+        public static void CreateEvent()
         {
             Console.WriteLine("Creating a new event.");
 
@@ -29,7 +29,19 @@ namespace _1_Int_EventMenu
             // Make a date out of the two strings.
             e.Date = ParseStringsAsDate(date, hour);
 
-            Events.Add(e);
+            if (IsValidEvent(e))
+            {
+                Events.Add(e);
+            }
+            else
+            {
+                Console.WriteLine("The submitted event details are invalid. Please review and try again.");
+            }
+        }
+
+        public static bool IsValidEvent(Event e)
+        {
+            throw new NotImplementedException();
         }
 
         internal static void DeleteEvent()

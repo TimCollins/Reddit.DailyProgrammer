@@ -2,7 +2,7 @@
 
 namespace _1_Int_EventMenu
 {
-    class Event
+    public class Event
     {
         public int ID { get; set; }
         public string Name { get; set; }

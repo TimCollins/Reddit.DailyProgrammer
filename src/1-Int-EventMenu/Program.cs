@@ -53,8 +53,6 @@ namespace _1_Int_EventMenu
             }
         }
 
-
-
         private static void DisplayMenu()
         {
             Console.WriteLine("This program will allow you to schedule events by hour on specified days.");

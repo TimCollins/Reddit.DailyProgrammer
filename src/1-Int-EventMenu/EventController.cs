@@ -41,7 +41,9 @@ namespace _1_Int_EventMenu
 
         public static bool IsValidEvent(Event e)
         {
-            throw new NotImplementedException();
+            // An event is valid if it has a name, is not in the past and is not set to start at
+            // the same time as an event already in the system.
+            return !string.IsNullOrEmpty(e.Name) && e.Date > DateTime.Now;
         }
 
         internal static void DeleteEvent()

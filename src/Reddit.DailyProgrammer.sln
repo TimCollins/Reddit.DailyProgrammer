@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\Unit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1-Easy-Greeting", "1-Easy-Greeting\1-Easy-Greeting.csproj", "{C32C8FF8-A61C-43C1-B535-4C13010CF0F7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1-Int-EventMenu", "1-Int-EventMenu\1-Int-EventMenu.csproj", "{0F448839-870D-406B-A9CE-53B63D93C689}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,10 @@ Global
 		{C32C8FF8-A61C-43C1-B535-4C13010CF0F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C32C8FF8-A61C-43C1-B535-4C13010CF0F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C32C8FF8-A61C-43C1-B535-4C13010CF0F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F448839-870D-406B-A9CE-53B63D93C689}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F448839-870D-406B-A9CE-53B63D93C689}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F448839-870D-406B-A9CE-53B63D93C689}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F448839-870D-406B-A9CE-53B63D93C689}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

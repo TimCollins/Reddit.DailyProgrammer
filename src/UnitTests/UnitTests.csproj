@@ -46,10 +46,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EventMenuTests.cs" />
     <Compile Include="SemanticVersionSortTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\1-Int-EventMenu\1-Int-EventMenu.csproj">
+      <Project>{0f448839-870d-406b-a9ce-53b63d93c689}</Project>
+      <Name>1-Int-EventMenu</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SemanticVersionSort\SemanticVersionSort.csproj">
       <Project>{2ec4158f-2e60-4e7b-b2a8-32130c3f09c1}</Project>
       <Name>SemanticVersionSort</Name>

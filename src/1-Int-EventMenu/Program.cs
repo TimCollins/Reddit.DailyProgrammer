@@ -1,5 +1,5 @@
 ﻿using System;
-using Util;
+using System.Collections.Generic;
 
 namespace _1_Int_EventMenu
 {
@@ -12,9 +12,12 @@ namespace _1_Int_EventMenu
     /// </summary>
     class Program
     {
+        public static List<Event> Events; 
+
         static void Main(string[] args)
         {
             int input = -1;
+            Events = new List<Event>(); 
 
             while (input != 0)
             {
@@ -22,9 +25,6 @@ namespace _1_Int_EventMenu
                 input = Convert.ToInt32(Console.ReadLine());
                 ParseInput(input);
             }
-
-            // TODO: Create an app-wide object to store event details by date and time.
-            // The CRUD operations should operate on that object.
         }
 
         private static void ParseInput(int input)
@@ -37,14 +37,96 @@ namespace _1_Int_EventMenu
                 case 1:
                     CreateEvent();
                     break;
+                case 2:
+                    ViewEvents();
+                    break;
+                case 3:
+                    EditEvent();
+                    break;
+                case 4:
+                    DeleteEvent();
+                    break;
                 default:
                     throw new ArgumentException("input");
             }
         }
 
+        private static void DeleteEvent()
+        {
+            ViewEvents();
+
+            Console.Write("Enter ID of event to delete: ");
+            int id = Convert.ToInt32(Console.ReadLine());
+
+            Events.RemoveAt(id);
+
+            Console.WriteLine("Event deleted.");
+        }
+
+        private static void EditEvent()
+        {
+            ViewEvents();
+
+            Console.Write("Enter ID of event to edit: ");
+            int id = Convert.ToInt32(Console.ReadLine());
+
+            Events.RemoveAt(id);
+
+        }
+
+        private static void ViewEvents()
+        {
+            if (Events.Count == 0)
+            {
+                Console.WriteLine("There are no events in the system yet.");
+                return;
+            }
+
+            Console.WriteLine("\nThere are {0} events in the system.", Events.Count);
+
+            foreach (Event e in Events)
+            {
+                ShowEventDetails(e);
+            }
+
+            Console.WriteLine("\n");
+        }
+
+        private static void ShowEventDetails(Event e)
+        {
+            Console.WriteLine("ID: {0}, Name: {1}, Date: {2}", e.ID, e.Name, e.Date);
+        }
+
         private static void CreateEvent()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Creating a new event.");
+            
+            Event e = new Event
+            {
+                ID = Events.Count + 1
+            };
+
+            Console.Write("Enter event name: ");
+            e.Name = Console.ReadLine();
+
+            Console.Write("Enter event date (dd/mm/yyyy): ");
+            string date = Console.ReadLine();
+
+            Console.Write("Enter event start time hour (0-23): ");
+            string hour = Console.ReadLine();
+
+            // Make a date out of the two strings.
+            e.Date = ParseStringsAsDate(date, hour);
+
+            Events.Add(e);
+        }
+
+        private static DateTime ParseStringsAsDate(string date, string hour)
+        {
+            string[] parts = date.Split('/');
+            DateTime d = new DateTime(Convert.ToInt32(parts[2]), Convert.ToInt32(parts[1]), Convert.ToInt32(parts[0]), Convert.ToInt32(hour), 0, 0);
+
+            return d;
         }
 
         private static void DisplayMenu()
@@ -56,5 +138,11 @@ namespace _1_Int_EventMenu
                               "4 - Remove Event\n" +
                               "0 - Exit Program");
         }
+
+        
     }
+
+        
+
+
 }

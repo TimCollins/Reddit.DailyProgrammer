@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1-Int-EventMenu", "1-Int-Ev
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1-Diff-Guesser", "1-Diff-Guesser\1-Diff-Guesser.csproj", "{1AE6DC56-903B-4BAA-AB6A-D118C1E512CD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2-Easy-Calculator", "2-Easy-Calculator\2-Easy-Calculator.csproj", "{9119A8C3-14E7-4036-B3FB-723D561422F2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,10 @@ Global
 		{1AE6DC56-903B-4BAA-AB6A-D118C1E512CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1AE6DC56-903B-4BAA-AB6A-D118C1E512CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1AE6DC56-903B-4BAA-AB6A-D118C1E512CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9119A8C3-14E7-4036-B3FB-723D561422F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9119A8C3-14E7-4036-B3FB-723D561422F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9119A8C3-14E7-4036-B3FB-723D561422F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9119A8C3-14E7-4036-B3FB-723D561422F2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

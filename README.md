@@ -9,4 +9,10 @@ Complete
 --
 Challenge #183 - [Semantic Version Sort](http://www.reddit.com/r/dailyprogrammer/comments/2igfj9/10062014_challenge_183_easy_semantic_version_sort/)
 
-Challenge #1 - [Greeting](http://www.reddit.com/r/dailyprogrammer/comments/pih8x/easy_challenge_1/)
+Challenge #1 Easy - [Greeting](http://www.reddit.com/r/dailyprogrammer/comments/pih8x/easy_challenge_1/)
+
+Challenge #1 Intermediate - [CRUD Operations](http://www.reddit.com/r/dailyprogrammer/comments/pihtx/intermediate_challenge_1/)
+
+Challenge #1 - Difficult [Number Guesser](http://www.reddit.com/r/dailyprogrammer/comments/pii6j/difficult_challenge_1/)
+
+Challenge #2 Easy - [Working Day Calculator](http://www.reddit.com/r/dailyprogrammer/comments/pjbj8/easy_challenge_2/)

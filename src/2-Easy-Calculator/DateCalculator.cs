@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace _2_Easy_Calculator
 {
@@ -37,22 +38,41 @@ namespace _2_Easy_Calculator
                 throw new ArgumentException("date");
             }
 
-            //ArgumentException
-            // IndexOutOfRangeException
-            // ArgumentOutofRangeException
             return new DateTime(Convert.ToInt32(parts[2]), Convert.ToInt32(parts[1]), Convert.ToInt32(parts[0]));
         }
 
         public static int GetWorkingDays(DateTime startDate, DateTime endDate)
         {
-            // Get the days between startDate and endDate
+            if (endDate <= startDate)
+            {
+                throw new ArgumentException("endDate");
+            }
+
+            TimeSpan daysSpan = endDate - startDate;
+            List<DayOfWeek> days = new List<DayOfWeek>();
+
+            for (int i = 0; i < daysSpan.Days; i++)
+            {
+                days.Add(startDate.DayOfWeek);
+                startDate = startDate.AddDays(1);
+            }
+
             // Loop through the collection. 
             // For each day, if it's a Saturday or Sunday remove it from the collection.
-            // When the whole collection has been parsed, count up the days left.
-            // 
-            DateTime fred = DateTime.Now;
-            //fred.DayOfWeek
-            return 1;
+            for (int i = 0; i < days.Count; i++)
+            {
+                if (days[i] == DayOfWeek.Saturday || days[i] == DayOfWeek.Sunday)
+                {
+                    days.Remove(days[i]);
+                }
+
+                if (i == days.Count)
+                {
+                    break;
+                }
+            }
+
+            return days.Count;
         }
     }
 }

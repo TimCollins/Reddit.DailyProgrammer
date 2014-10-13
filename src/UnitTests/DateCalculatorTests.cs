@@ -62,5 +62,21 @@ namespace UnitTests
             const string badInput = "Fred/10/2014";
             Assert.Throws<ArgumentException>(() => DateCalculator.GetDateFromString(badInput));
         }
+
+        [Test]
+        public void WhenEndLessThanStartExceptionIsThrown()
+        {
+            DateTime start = DateTime.Now;
+            DateTime end = start.AddDays(-1);
+            Assert.Throws<ArgumentException>(() => DateCalculator.GetWorkingDays(start, end));
+        }
+
+        [Test]
+        public void WhenEndEqualToStartExceptionIsThrown()
+        {
+            DateTime start = DateTime.Now;
+            DateTime end = start;
+            Assert.Throws<ArgumentException>(() => DateCalculator.GetWorkingDays(start, end));
+        }
     }
 }

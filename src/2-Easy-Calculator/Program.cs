@@ -20,6 +20,10 @@ namespace _2_Easy_Calculator
             Console.Write("Enter end date in dd/mm/yyyy format: ");
             string end = Console.ReadLine();
 
+            // For testing
+            //string start = "03/10/2014";
+            //string end = "06/10/2014";
+            
             DateTime startDate = DateCalculator.GetDateFromString(start);
             DateTime endDate = DateCalculator.GetDateFromString(end);
 

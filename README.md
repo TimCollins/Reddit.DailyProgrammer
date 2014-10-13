@@ -14,3 +14,5 @@ Challenge #1 Easy - [Greeting](http://www.reddit.com/r/dailyprogrammer/comments/
 Challenge #1 Intermediate - [CRUD Operations](http://www.reddit.com/r/dailyprogrammer/comments/pihtx/intermediate_challenge_1/)
 
 Challenge #1 - Difficult [Number Guesser](http://www.reddit.com/r/dailyprogrammer/comments/pii6j/difficult_challenge_1/)
+
+Challenge #2 Easy - [Working Day Calculator](http://www.reddit.com/r/dailyprogrammer/comments/pjbj8/easy_challenge_2/)

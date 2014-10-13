@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 
 namespace _2_Easy_Calculator
 {
@@ -46,6 +45,13 @@ namespace _2_Easy_Calculator
 
         public static int GetWorkingDays(DateTime startDate, DateTime endDate)
         {
+            // Get the days between startDate and endDate
+            // Loop through the collection. 
+            // For each day, if it's a Saturday or Sunday remove it from the collection.
+            // When the whole collection has been parsed, count up the days left.
+            // 
+            DateTime fred = DateTime.Now;
+            //fred.DayOfWeek
             return 1;
         }
     }

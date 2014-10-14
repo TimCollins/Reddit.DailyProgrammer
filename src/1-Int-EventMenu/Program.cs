@@ -22,7 +22,7 @@ namespace _1_Int_EventMenu
                 DisplayMenu();
                 DisplayPrompt();
 
-                ConsoleKeyInfo cki = Console.ReadKey(true);                
+                ConsoleKeyInfo cki = Console.ReadKey(true);
                 input = Convert.ToInt32(cki.KeyChar) - 48;
                 ParseInput(input);
             }

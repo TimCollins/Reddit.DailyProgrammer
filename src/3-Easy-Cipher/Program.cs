@@ -17,10 +17,10 @@ namespace _3_Easy_Cipher
             DisplayHeader();
 
             Console.Write("Please enter some text: ");
-            string input = Console.ReadLine();
+            //string input = Console.ReadLine();
             
             // For testing
-            //string input = "fred";
+            string input = " Fred 123";
 
             Console.Write("Encrypted text: ");
             string encrypted = Cipher.Encrypt(input);

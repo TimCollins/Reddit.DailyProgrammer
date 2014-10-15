@@ -13,18 +13,28 @@ namespace _3_Easy_Cipher
 
             foreach (char c in input)
             {
-                char shifted = (char) (c + shiftDistance);
+                // Ignore space
+                if (c == 32)
+                {
+                    output.Append(c);
+                }
+                else
+                {
+                    char shifted = (char) (c + shiftDistance);
 
-                //if (shifted > 'z')
-                //{
-                //    shifted = (char)(shifted - 26);
-                //}
-                //else if (shifted < 'a')
-                //{
-                //    shifted = (char)(shifted + 26);
-                //}
+                    if (shifted > 156)
+                    {
+                        // If the char is now above '~' in the ASCII table then wrap around.
+                        shifted = (char) (shifted - 123);
+                    }
+                    else if (shifted < 33)
+                    {
+                        // If the char is now lower in the ASCII table than '!' then wrap around.
+                        shifted = (char) (shifted + 93);
+                    }
 
-                output.Append(shifted);
+                    output.Append(shifted);
+                }
             }
 
             return output.ToString();
@@ -36,19 +46,28 @@ namespace _3_Easy_Cipher
 
             foreach (char c in input)
             {
-                //char shifted = Char.IsLetterOrDigit(c) ? c : (char)(c - shiftDistance);
-                char shifted = (char) (c - shiftDistance);
+                // Ignore space
+                if (c == 32)
+                {
+                    output.Append(c);
+                }
+                else
+                {
+                    char shifted = (char) (c - shiftDistance);
 
-                //if (shifted > 'z')
-                //{
-                //    shifted = (char)(shifted - 26);
-                //}
-                //else if (shifted < 'a')
-                //{
-                //    shifted = (char)(shifted + 26);
-                //}
+                    if (shifted > 156)
+                    {
+                        // If the char is now above '~' in the ASCII table then wrap around.
+                        shifted = (char) (shifted - 123);
+                    }
+                    else if (shifted < 33)
+                    {
+                        // If the char is now lower in the ASCII table than '!' then wrap around.
+                        shifted = (char) (shifted + 93);
+                    }
 
-                output.Append(shifted);
+                    output.Append(shifted);
+                }
             }
 
             return output.ToString();

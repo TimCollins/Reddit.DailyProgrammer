@@ -126,22 +126,44 @@ namespace UnitTests
             Assert.AreEqual("JFDxow", output);
         }
 
-        //[Test]
-        //public void NonAlphaNumericCharsIgnoredDuringEncryption()
-        //{
-        //    const string input = "OGas!£";
+        [Test]
+        public void NonAlphaNumericCharsHandledDuringEncryption()
+        {
+            const string input = "%!&^Aa";
 
-        //    string output = Cipher.Encrypt(input);
+            string output = Cipher.Encrypt(input);
 
-        //    Assert.AreEqual("MIG{rz", output);
-        //}
+            Assert.AreEqual("($)aDd", output);
+        }
 
-        //[Test]
-        //public void SpaceIsIgnored()
-        //{
-            
-        //}
+        [Test]
+        public void NonAlphaNumericCharsHandledDuringDecryption()
+        {
+            const string input = "($)aDd";
 
-        // Check uppercase, other punctuation
+            string output = Cipher.Decrypt(input);
+
+            Assert.AreEqual("%!&^Aa", output);
+        }
+
+        [Test]
+        public void SpaceIsIgnoredDuringEncryption()
+        {
+            const string input = " Fred 123";
+
+            string output = Cipher.Encrypt(input);
+
+            Assert.AreEqual(" Iuhg 456", output);
+        }
+
+        [Test]
+        public void SpaceIsIgnoredDuringDecryption()
+        {
+            const string input = " Iuhg 456";
+
+            string output = Cipher.Decrypt(input);
+
+            Assert.AreEqual(" Fred 123", output);
+        }
     }
 }

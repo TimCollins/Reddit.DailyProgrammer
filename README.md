@@ -19,4 +19,6 @@ Challenge #2 Intermediate - [Text Adventure](http://www.reddit.com/r/dailyprogra
 
 Challenge #2 Difficult - [Stopwatch](http://www.reddit.com/r/dailyprogrammer/comments/pjsdx/difficult_challenge_2/)
 
+Challenge #3 Easy - [Caesar cipher](http://www.reddit.com/r/dailyprogrammer/comments/pkw2m/2112012_challenge_3_easy/)
+
 Challenge #183 - [Semantic Version Sort](http://www.reddit.com/r/dailyprogrammer/comments/2igfj9/10062014_challenge_183_easy_semantic_version_sort/)

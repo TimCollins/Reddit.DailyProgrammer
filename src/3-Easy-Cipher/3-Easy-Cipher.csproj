@@ -4,15 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D68C00A5-D975-4428-A878-9B82F5362885}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{5E29DDC4-E2CB-4AE0-9744-267D7248DE10}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>UnitTests</RootNamespace>
-    <AssemblyName>UnitTests</AssemblyName>
+    <RootNamespace>_3_Easy_Cipher</RootNamespace>
+    <AssemblyName>3-Easy-Cipher</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +23,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -30,13 +32,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Moq">
-      <HintPath>..\..\lib\Moq.dll</HintPath>
-    </Reference>
-    <Reference Include="nunit.framework, Version=2.5.10.11092, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\lib\nunit.framework.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,28 +41,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CipherTests.cs" />
-    <Compile Include="DateCalculatorTests.cs" />
-    <Compile Include="EventMenuTests.cs" />
-    <Compile Include="SemanticVersionSortTests.cs" />
+    <Compile Include="Cipher.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\1-Int-EventMenu\1-Int-EventMenu.csproj">
-      <Project>{0f448839-870d-406b-a9ce-53b63d93c689}</Project>
-      <Name>1-Int-EventMenu</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\2-Easy-Calculator\2-Easy-Calculator.csproj">
-      <Project>{9119a8c3-14e7-4036-b3fb-723d561422f2}</Project>
-      <Name>2-Easy-Calculator</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\3-Easy-Cipher\3-Easy-Cipher.csproj">
-      <Project>{5E29DDC4-E2CB-4AE0-9744-267D7248DE10}</Project>
-      <Name>3-Easy-Cipher</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SemanticVersionSort\SemanticVersionSort.csproj">
-      <Project>{2ec4158f-2e60-4e7b-b2a8-32130c3f09c1}</Project>
-      <Name>SemanticVersionSort</Name>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Util\Util.csproj">
+      <Project>{f90b35c6-c3db-4506-b6d9-30e2c5876199}</Project>
+      <Name>Util</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

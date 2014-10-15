@@ -15,14 +15,14 @@ namespace _3_Easy_Cipher
             {
                 char shifted = (char) (c + shiftDistance);
 
-                if (shifted > 'z')
-                {
-                    shifted = (char)(shifted - 26);
-                }
-                else if (shifted < 'a')
-                {
-                    shifted = (char)(shifted + 26);
-                }
+                //if (shifted > 'z')
+                //{
+                //    shifted = (char)(shifted - 26);
+                //}
+                //else if (shifted < 'a')
+                //{
+                //    shifted = (char)(shifted + 26);
+                //}
 
                 output.Append(shifted);
             }
@@ -39,14 +39,14 @@ namespace _3_Easy_Cipher
                 //char shifted = Char.IsLetterOrDigit(c) ? c : (char)(c - shiftDistance);
                 char shifted = (char) (c - shiftDistance);
 
-                if (shifted > 'z')
-                {
-                    shifted = (char)(shifted - 26);
-                }
-                else if (shifted < 'a')
-                {
-                    shifted = (char)(shifted + 26);
-                }
+                //if (shifted > 'z')
+                //{
+                //    shifted = (char)(shifted - 26);
+                //}
+                //else if (shifted < 'a')
+                //{
+                //    shifted = (char)(shifted + 26);
+                //}
 
                 output.Append(shifted);
             }

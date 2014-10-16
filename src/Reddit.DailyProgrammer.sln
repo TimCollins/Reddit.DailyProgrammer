@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2-Diff-Stopwatch", "2-Diff-
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3-Easy-Cipher", "3-Easy-Cipher\3-Easy-Cipher.csproj", "{5E29DDC4-E2CB-4AE0-9744-267D7248DE10}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3-Int-Cipher", "3-Int-Cipher\3-Int-Cipher.csproj", "{31E8ADD4-DDCF-474A-A1C4-C40CF794FC12}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -67,6 +69,10 @@ Global
 		{5E29DDC4-E2CB-4AE0-9744-267D7248DE10}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E29DDC4-E2CB-4AE0-9744-267D7248DE10}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E29DDC4-E2CB-4AE0-9744-267D7248DE10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31E8ADD4-DDCF-474A-A1C4-C40CF794FC12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31E8ADD4-DDCF-474A-A1C4-C40CF794FC12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31E8ADD4-DDCF-474A-A1C4-C40CF794FC12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31E8ADD4-DDCF-474A-A1C4-C40CF794FC12}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

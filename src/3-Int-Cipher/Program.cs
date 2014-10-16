@@ -13,27 +13,22 @@ namespace _3_Int_Cipher
         {
             DisplayHeader();
 
-            //Console.Write("Please enter some text to encrypt: ");
-            //string input = Console.ReadLine();
+            Console.Write("Please enter some text to encrypt: ");
+            string input = Console.ReadLine();
 
-            //Console.Write("Please enter a passphrase: ");
-            //string passPhrase = Console.ReadLine();
+            Console.Write("Please enter a passphrase: ");
+            string passPhrase = Console.ReadLine();
 
             // For testing
-            string input = "FREDMCFRED";
-            string passPhrase = "ZXCV";
-            string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-            // Take chars from passphrase, remove repeated chars and prepend them to 
-            // the alphabet string. Remove the letters used in the pass phrase from the
-            // alphabet string.
-            string cypherbet = "ZXCVABDEFGHIJKLMNOPQRSTUWY";
+            //string input = "FREDMCFRED";
+            //string passPhrase = "ZXCV";
 
             Console.Write("Encrypted text: ");
-            string encrypted = Cipher.Encrypt(input, alphabet, cypherbet);
+            string encrypted = Cipher.Encrypt(input, passPhrase);
             Console.WriteLine(encrypted);
 
             Console.Write("Decrypted text: ");
-            Console.WriteLine(Cipher.Decrypt(encrypted, cypherbet, alphabet));
+            Console.WriteLine(Cipher.Decrypt(encrypted, passPhrase));
 
             ConsoleUtils.WaitForEscape();
         }

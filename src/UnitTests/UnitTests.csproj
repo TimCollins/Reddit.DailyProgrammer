@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AlphabeticalCipherTests.cs" />
     <Compile Include="CipherTests.cs" />
     <Compile Include="DateCalculatorTests.cs" />
     <Compile Include="EventMenuTests.cs" />
@@ -64,6 +65,10 @@
     <ProjectReference Include="..\3-Easy-Cipher\3-Easy-Cipher.csproj">
       <Project>{5E29DDC4-E2CB-4AE0-9744-267D7248DE10}</Project>
       <Name>3-Easy-Cipher</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\3-Int-Cipher\3-Int-Cipher.csproj">
+      <Project>{31e8add4-ddcf-474a-a1c4-c40cf794fc12}</Project>
+      <Name>3-Int-Cipher</Name>
     </ProjectReference>
     <ProjectReference Include="..\SemanticVersionSort\SemanticVersionSort.csproj">
       <Project>{2ec4158f-2e60-4e7b-b2a8-32130c3f09c1}</Project>

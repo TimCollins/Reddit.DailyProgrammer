@@ -29,7 +29,7 @@ namespace _4_Easy_Password
             ConsoleUtils.WaitForEscape();
         }
 
-        private static void DisplayPasswords(List<string> passwords)
+        private static void DisplayPasswords(IReadOnlyList<string> passwords)
         {
             for (int i = 0; i < passwords.Count; i++)
             {

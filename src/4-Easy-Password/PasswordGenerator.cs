@@ -4,14 +4,13 @@ using System.Text;
 
 namespace _4_Easy_Password
 {
-    class PasswordGenerator
+    public class PasswordGenerator
     {
         private static readonly Random Random = new Random();
         private const string SourceChars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 
         public static List<string> GeneratePasswords(int noPasswords, int passwordLength)
         {
-            // For each password, generate an alphabetical string of passwordLength chars.
             List<string> passwords = new List<string>();
 
             for (int i = 0; i < noPasswords; i++)

@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3-Int-Cipher", "3-Int-Ciphe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3-Diff-Unscrambler", "3-Diff-Unscrambler\3-Diff-Unscrambler.csproj", "{85FAED99-A9AA-458B-99C1-1DB77B8396ED}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4-Easy-Password", "4-Easy-Password\4-Easy-Password.csproj", "{CCEAB1EC-6953-4FE1-A491-C757BD5A1292}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -79,6 +81,10 @@ Global
 		{85FAED99-A9AA-458B-99C1-1DB77B8396ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{85FAED99-A9AA-458B-99C1-1DB77B8396ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{85FAED99-A9AA-458B-99C1-1DB77B8396ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCEAB1EC-6953-4FE1-A491-C757BD5A1292}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCEAB1EC-6953-4FE1-A491-C757BD5A1292}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCEAB1EC-6953-4FE1-A491-C757BD5A1292}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCEAB1EC-6953-4FE1-A491-C757BD5A1292}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

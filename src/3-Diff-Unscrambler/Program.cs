@@ -16,67 +16,60 @@ namespace _3_Diff_Unscrambler
         static void Main(string[] args)
         {
             string fileName = Directory.GetCurrentDirectory() + "\\wordlist.txt";
-            // Open wordlist.txt
-            // Read each line into a List (source)
-            // Sort list by length?
-            // For each string in words:
-            
-            // Something??
 
-            //List<string> words = new List<string>
-            //{
-            //    "mkeart",
-            //    "sleewa",
-            //    "edcudls",
-            //    "iragoge",
-            //    "usrlsle",
-            //    "nalraoci",
-            //    "nsdeuto",
-            //    "amrhat",
-            //    "inknsy",
-            //    "iferkna"
-            //};
+            List<string> scrambledWords = new List<string>
+            {
+                "mkeart",
+                "sleewa",
+                "edcudls",
+                "iragoge",
+                "usrlsle",
+                "nalraoci",
+                "nsdeuto",
+                "amrhat",
+                "inknsy",
+                "iferkna"
+            };
 
-            //List<string> source = new List<string>();
+            List<string> unscrambledWords = new List<string>();
 
-            //using (StreamReader sr = new StreamReader(fileName))
-            //{
-            //    while (!sr.EndOfStream)
-            //    {
-            //        source.Add(sr.ReadLine());
-            //    }
-            //}
+            using (StreamReader sr = new StreamReader(fileName))
+            {
+                while (!sr.EndOfStream)
+                {
+                    unscrambledWords.Add(sr.ReadLine());
+                }
+            }
 
             //source = new List<string>(source.OrderBy(s => s));
 
             // For testing
-            List<string> scrambledWords = new List<string>
-            {
-                "derf",
-                "act",
-                "odg"
-            };
+            //List<string> scrambledWords = new List<string>
+            //{
+            //    "derf",
+            //    "act",
+            //    "odg"
+            //};
 
-            List<string> unscrambledWords = new List<string>
-            {
-                "fred",
-                "cat",
-                "dog"
-            };
+            //List<string> unscrambledWords = new List<string>
+            //{
+            //    "fred",
+            //    "cat",
+            //    "dog"
+            //};
 
             List<string> output = Unscramble(scrambledWords, unscrambledWords);
 
             for (int i = 0; i < output.Count; i++)
             {
-                Console.WriteLine("Scrambled {0} matches unscrambled {1}", scrambledWords[i], unscrambledWords[i]);
+                Console.WriteLine("Scrambled {0} matches unscrambled {1}", scrambledWords[i], output[i]);
             }
 
             ConsoleUtils.WaitForEscape();
         }
 
-        public static List<string> Unscramble(List<string> scrambledWords, List<string> unscrambledWords)
+        private static List<string> Unscramble(IEnumerable<string> scrambledWords, IReadOnlyList<string> unscrambledWords)
         {
-            // Make this private when the algorithm to use has been figued out.
             List<string> words = new List<string>();
 
             // Compare length of each word in source.
@@ -93,6 +86,7 @@ namespace _3_Diff_Unscrambler
                         if (DoWordsMatch(s, unscrambledWords[i]))
                         {
                             words.Add(unscrambledWords[i]);
+                            break;
                         }
                     }
                 }

@@ -23,6 +23,8 @@ Challenge #3 Easy - [Caesar cipher](http://www.reddit.com/r/dailyprogrammer/comm
 
 Challenge #3 Intermediate - [Alphabetical substitution cipher](http://www.reddit.com/r/dailyprogrammer/comments/pkwb1/2112012_challenge_3_intermediate/)
 
+Challenge #3 Difficult - [Scrambled Words](http://www.reddit.com/r/dailyprogrammer/comments/pkwgf/2112012_challenge_3_difficult/)
+
 Challenge #4 Easy - [Password Generator](http://www.reddit.com/r/dailyprogrammer/comments/pm6oj/2122012_challenge_4_easy/)
 
 Challenge #183 - [Semantic Version Sort](http://www.reddit.com/r/dailyprogrammer/comments/2igfj9/10062014_challenge_183_easy_semantic_version_sort/)

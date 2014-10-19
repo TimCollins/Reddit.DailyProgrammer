@@ -27,4 +27,7 @@ Challenge #3 Difficult - [Scrambled Words](http://www.reddit.com/r/dailyprogramm
 
 Challenge #4 Easy - [Password Generator](http://www.reddit.com/r/dailyprogrammer/comments/pm6oj/2122012_challenge_4_easy/)
 
+Challenge #4 Intermediate - [Calculator](http://www.reddit.com/r/dailyprogrammer/comments/pm6sq/2122012_challenge_4_intermediate/)
+
+
 Challenge #183 - [Semantic Version Sort](http://www.reddit.com/r/dailyprogrammer/comments/2igfj9/10062014_challenge_183_easy_semantic_version_sort/)

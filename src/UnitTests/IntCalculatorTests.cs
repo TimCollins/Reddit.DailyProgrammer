@@ -46,14 +46,24 @@ namespace UnitTests
             Assert.AreEqual(25, output);
         }
 
-        //[Test]
-        //public void VerifyExpectedOutput()
-        //{
-        //    const string input = "5 * 5 + 4";
+        [Test]
+        public void VerifyMultiplicationAndAddition()
+        {
+            const string input = "5 * 5 + 4";
 
-        //    int output = Calculator.Calculate(input);
+            int output = Calculator.Calculate(input);
 
-        //    Assert.AreEqual(29, output);
-        //}
+            Assert.AreEqual(29, output);
+        }
+
+        [Test]
+        public void VerifyAdditionAndMultiplication()
+        {
+            const string input = "5 + 5 * 4";
+
+            int output = Calculator.Calculate(input);
+
+            Assert.AreEqual(25, output);
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using Util;
+﻿using System;
+using Util;
 
 namespace _4_Int_Calculator
 {
@@ -11,7 +12,20 @@ namespace _4_Int_Calculator
     {
         static void Main(string[] args)
         {
+            DisplayStartText();
+            Console.Write("Please enter the expression to evaluate: ");
+            string input = Console.ReadLine();
+
+            int result = Calculator.Calculate(input);
+
+            Console.WriteLine("Result: {0}", result);
+
             ConsoleUtils.WaitForEscape();
+        }
+
+        private static void DisplayStartText()
+        {
+            Console.WriteLine("This program will take a mathematical expression string and evaluate it.");
         }
     }
 }

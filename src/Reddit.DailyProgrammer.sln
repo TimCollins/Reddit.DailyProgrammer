@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4-Easy-Password", "4-Easy-P
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4-Int-Calculator", "4-Int-Calculator\4-Int-Calculator.csproj", "{002FB344-E344-43A5-A4B4-CF0903FE9161}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4-Diff-NumCombos", "4-Diff-NumCombos\4-Diff-NumCombos.csproj", "{19792084-6064-4A08-A22A-D8123F9F0AED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -91,6 +93,10 @@ Global
 		{002FB344-E344-43A5-A4B4-CF0903FE9161}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{002FB344-E344-43A5-A4B4-CF0903FE9161}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{002FB344-E344-43A5-A4B4-CF0903FE9161}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19792084-6064-4A08-A22A-D8123F9F0AED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19792084-6064-4A08-A22A-D8123F9F0AED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19792084-6064-4A08-A22A-D8123F9F0AED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19792084-6064-4A08-A22A-D8123F9F0AED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

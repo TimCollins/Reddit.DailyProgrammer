@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text.RegularExpressions;
 
 namespace _4_Diff_NumCombos
@@ -13,20 +14,23 @@ namespace _4_Diff_NumCombos
                 throw new ArgumentException(input);
             }
 
-            // Take a string like 2,3,4
-            // and return a list of just the integers.
             input = Regex.Replace(input, @"\s+", "");
 
             string[] numbers = input.Split(',');
 
             List<int> output = new List<int>();
-
             foreach (string s in numbers)
             {
-                output.Add(Convert.ToInt32(s));
+                int i;
+                if (!int.TryParse(s, out i))
+                {
+                    throw new ArgumentException(input);
+                }
+
+                output.Add(i);
             }
             
-            return output;
+            return new List<int>(output.OrderBy(x => x));
         }
 
         public static List<string> FindRelations(List<int> numbers)
@@ -34,7 +38,63 @@ namespace _4_Diff_NumCombos
             // Given a list of numbers
             // return a set of strings showing how the numbers are related
             // e.g. (5, 3, 15) should return "5 * 3 = 15", "15 / 3 = 5", "15 / 5 = 15"
-            return null;
+            List<string> output = new List<string>();
+
+            int a = numbers[0];
+            int b = numbers[1];
+            int c = numbers[2];
+            CheckValues(output, a, b, c);
+
+            a = numbers[1];
+            b = numbers[0];
+            c = numbers[2];
+            CheckValues(output, a, b, c);
+
+            a = numbers[2];
+            b = numbers[1];
+            c = numbers[0];
+            CheckValues(output, a, b, c);
+
+            a = numbers[1];
+            b = numbers[2];
+            c = numbers[0];
+            CheckValues(output, a, b, c);
+
+            a = numbers[2];
+            b = numbers[0];
+            c = numbers[1];
+            CheckValues(output, a, b, c);
+
+            a = numbers[0];
+            b = numbers[2];
+            c = numbers[1];
+            CheckValues(output, a, b, c);
+
+            return output;
+        }
+
+
+        private static void CheckValues(ICollection<string> output, int a, int b, int c)
+        {
+            if (a + b == c)
+            {
+                output.Add(string.Format("{0} + {1} = {2}", a, b, c));
+            }
+
+            if (a - b == c)
+            {
+                output.Add(string.Format("{0} - {1} = {2}", a, b, c));
+            }
+
+            if (a * b == c)
+            {
+                output.Add(string.Format("{0} * {1} = {2}", a, b, c));
+            }
+
+            if (a / b == c)
+            {
+                output.Add(string.Format("{0} / {1} = {2}", a, b, c));
+            }
         }
     }
 }

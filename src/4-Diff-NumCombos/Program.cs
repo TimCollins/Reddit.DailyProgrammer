@@ -33,7 +33,7 @@ namespace _4_Diff_NumCombos
                 Console.Write(i < numbers.Count - 1 ? ", " : "");
             }
 
-            Console.WriteLine("The output is ");
+            Console.WriteLine("\nThe output is ");
             foreach (string s in output)
             {
                 Console.WriteLine(s);

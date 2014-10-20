@@ -65,5 +65,25 @@ namespace UnitTests
 
             Assert.AreEqual(25, output);
         }
+
+        [Test]
+        public void VerifyAdditionAndSubtraction()
+        {
+            const string input = "5 + 5 - 4";
+
+            int output = Calculator.Calculate(input);
+
+            Assert.AreEqual(6, output);
+        }
+
+        [Test]
+        public void VerifyAdditionAndAddition()
+        {
+            const string input = "5 + 5 + 4";
+
+            int output = Calculator.Calculate(input);
+
+            Assert.AreEqual(14, output);
+        }
     }
 }

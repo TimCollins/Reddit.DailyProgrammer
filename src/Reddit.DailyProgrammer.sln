@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4-Int-Calculator", "4-Int-C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4-Diff-NumCombos", "4-Diff-NumCombos\4-Diff-NumCombos.csproj", "{19792084-6064-4A08-A22A-D8123F9F0AED}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5-Passw-Protect", "5-Passw-Protect\5-Passw-Protect.csproj", "{365A8E1B-4AED-42C4-A2FE-A6C7544E26C3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -97,6 +99,10 @@ Global
 		{19792084-6064-4A08-A22A-D8123F9F0AED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19792084-6064-4A08-A22A-D8123F9F0AED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{19792084-6064-4A08-A22A-D8123F9F0AED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{365A8E1B-4AED-42C4-A2FE-A6C7544E26C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{365A8E1B-4AED-42C4-A2FE-A6C7544E26C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{365A8E1B-4AED-42C4-A2FE-A6C7544E26C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{365A8E1B-4AED-42C4-A2FE-A6C7544E26C3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

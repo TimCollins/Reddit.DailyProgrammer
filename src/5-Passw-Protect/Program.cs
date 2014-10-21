@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 using Util;
 
 namespace _5_Passw_Protect
@@ -18,9 +19,29 @@ namespace _5_Passw_Protect
             string username = Console.ReadLine();
 
             Console.Write("Enter password: ");
-            string password = Console.ReadLine();
 
-            bool isValid = PasswordChecker.Validate(username, password);
+            StringBuilder password = new StringBuilder();
+            ConsoleKeyInfo cki = new ConsoleKeyInfo();
+
+            while (cki.Key != ConsoleKey.Enter)
+            {
+                cki = Console.ReadKey(true);
+                if (cki.Key == ConsoleKey.Enter)
+                {
+                    break;
+                }
+
+                if ((cki.Modifiers & ConsoleModifiers.Shift) != 0)
+                {
+                    password.Append(cki.Key);
+                }
+                else
+                {
+                    password.Append(cki.Key.ToString().ToLower());
+                }
+            }
+
+            bool isValid = PasswordChecker.Validate(username, password.ToString());
 
             Console.WriteLine(isValid ? "Details were valid." : "Invalid username or password entered. Please try again.");
 

@@ -31,5 +31,7 @@ Challenge #4 Intermediate - [Calculator](http://www.reddit.com/r/dailyprogrammer
 
 Challenge #4 Difficult - [Number Relations](http://www.reddit.com/r/dailyprogrammer/comments/pm7g7/2122012_challange_4_difficult/)
 
+Challenge #5 Easy - [Password Checker](http://www.reddit.com/r/dailyprogrammer/comments/pnhyn/2122012_challenge_5_easy/)
+
 
 Challenge #183 - [Semantic Version Sort](http://www.reddit.com/r/dailyprogrammer/comments/2igfj9/10062014_challenge_183_easy_semantic_version_sort/)

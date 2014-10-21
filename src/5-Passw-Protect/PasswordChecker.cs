@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 namespace _5_Passw_Protect
 {
@@ -21,29 +22,27 @@ namespace _5_Passw_Protect
                 {
                     Account account = new Account
                     {
-                        Username = sr.ReadLine(), 
-                        Password = sr.ReadLine()
+                        Username = GetNextValidLine(sr),
+                        Password = GetNextValidLine(sr), 
                     };
-
-                    //string line = sr.ReadLine();
-                    //while (line.StartsWith("#"))
-                    //{
-                    //    line = sr.ReadLine();
-                    //}
 
                     accounts.Add(account);
                 }
             }
 
-            foreach (Account account in accounts)
+            return accounts.Any(a => a.Username == username && a.Password == password);
+        }
+
+        private static string GetNextValidLine(StreamReader sr)
+        {
+            string line = null;
+
+            while (string.IsNullOrEmpty(line) || line.StartsWith("#"))
             {
-                if (account.Username == username && account.Password == password)
-                {
-                    return true;
-                }
+                line = sr.ReadLine();
             }
 
-            return false;
+            return line;
         }
     }
 }

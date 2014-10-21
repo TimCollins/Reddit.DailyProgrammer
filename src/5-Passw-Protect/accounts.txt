@@ -1,2 +1,10 @@
-﻿admin
+﻿# Username and password pairs.
+# Lines beginning with '#' are treated as comments and are ignored.
+
+# The admin account
+admin
 root
+
+# A user account
+fred
+password

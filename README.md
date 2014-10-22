@@ -33,5 +33,7 @@ Challenge #4 Difficult - [Number Relations](http://www.reddit.com/r/dailyprogram
 
 Challenge #5 Easy - [Password Checker](http://www.reddit.com/r/dailyprogrammer/comments/pnhyn/2122012_challenge_5_easy/)
 
+Challenge #5 Intermediate - [Anagram Finder](http://www.reddit.com/r/dailyprogrammer/comments/pnhtj/2132012_challenge_5_intermediate/)
+
 
 Challenge #183 - [Semantic Version Sort](http://www.reddit.com/r/dailyprogrammer/comments/2igfj9/10062014_challenge_183_easy_semantic_version_sort/)

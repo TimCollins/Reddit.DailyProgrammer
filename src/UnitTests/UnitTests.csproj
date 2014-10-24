@@ -44,6 +44,7 @@
     <Compile Include="EventMenuTests.cs" />
     <Compile Include="IntCalculatorTests.cs" />
     <Compile Include="NumComboTests.cs" />
+    <Compile Include="RemoveDuplicates.cs" />
     <Compile Include="SemanticVersionSortTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -71,6 +72,10 @@
     <ProjectReference Include="..\4-Int-Calculator\4-Int-Calculator.csproj">
       <Project>{002fb344-e344-43a5-a4b4-cf0903fe9161}</Project>
       <Name>4-Int-Calculator</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\6-Int-Remove-Dup\6-Int-Remove-Dup.csproj">
+      <Project>{807149c0-a246-442f-8676-dd953410632d}</Project>
+      <Name>6-Int-Remove-Dup</Name>
     </ProjectReference>
     <ProjectReference Include="..\SemanticVersionSort\SemanticVersionSort.csproj">
       <Project>{2ec4158f-2e60-4e7b-b2a8-32130c3f09c1}</Project>

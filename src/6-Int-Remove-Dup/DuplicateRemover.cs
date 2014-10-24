@@ -6,6 +6,16 @@ namespace _6_Int_Remove_Dup
     {
         public static string Remove(string input)
         {
+            if (string.IsNullOrEmpty(input))
+            {
+                return string.Empty;
+            }
+            
+            if (input.Length < 3)
+            {
+                return input;
+            }
+
             StringBuilder output = new StringBuilder();
 
             // Split the string in half and compare one half to the other.
@@ -15,6 +25,11 @@ namespace _6_Int_Remove_Dup
             if (DoWordsMatch(first, second))
             {
                 output.Append(first);
+            }
+            else
+            {
+                output.Append(first);
+                output.Append(second);
             }
 
             return output.ToString();

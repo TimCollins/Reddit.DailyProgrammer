@@ -7,6 +7,14 @@ namespace UnitTests
     class DuplicatesRemovalTests
     {
         [Test]
+        public void VerifyNoDuplicatesLeavesStringUnchanged()
+        {
+            string output = DuplicateRemover.Remove("hello");
+
+            Assert.AreEqual("hello", output);
+        }
+
+        [Test]
         public void VerifySimpleOutput()
         {
             string output = DuplicateRemover.Remove("hellohello");
@@ -15,14 +23,46 @@ namespace UnitTests
         }
 
         [Test]
-        public void VerifyOutput()
+        public void VerifyShortStringsAreUnchanged()
         {
-            string output = DuplicateRemover.Remove("aaatestBlaBlatestBlaBla");
+            string output = DuplicateRemover.Remove("he");
 
-            // The second occurrence of "test" and the third and fourth occurrences of "Bla" 
-            // should be removed.
-
-            Assert.AreEqual("aaatestBlaBla", output);
+            Assert.AreEqual("he", output);
         }
+
+        [Test]
+        public void NullStringReturnsEmptyString()
+        {
+            string output = DuplicateRemover.Remove(null);
+
+            Assert.IsEmpty(output);
+        }
+
+        [Test]
+        public void EmptyStringReturnsEmptyString()
+        {
+            string output = DuplicateRemover.Remove(string.Empty);
+
+            Assert.IsEmpty(output);
+        }
+
+        //[Test]
+        //public void VerifyMultipleDuplicatesAreRemoved()
+        //{
+        //    string output = DuplicateRemover.Remove("hellohellohello");
+
+        //    Assert.AreEqual("hello", output);
+        //}
+
+        //[Test]
+        //public void VerifyOutput()
+        //{
+        //    string output = DuplicateRemover.Remove("aaatestBlaBlatestBlaBla");
+
+        //    // The second occurrence of "test" and the third and fourth occurrences of "Bla" 
+        //    // should be removed.
+
+        //    Assert.AreEqual("aaatestBlaBla", output);
+        //}
     }
 }

@@ -44,7 +44,7 @@
     <Compile Include="EventMenuTests.cs" />
     <Compile Include="IntCalculatorTests.cs" />
     <Compile Include="NumComboTests.cs" />
-    <Compile Include="RemoveDuplicates.cs" />
+    <Compile Include="DuplicatesRemovalTests.cs" />
     <Compile Include="SemanticVersionSortTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

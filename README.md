@@ -35,5 +35,7 @@ Challenge #5 Easy - [Password Checker](http://www.reddit.com/r/dailyprogrammer/c
 
 Challenge #5 Intermediate - [Anagram Finder](http://www.reddit.com/r/dailyprogrammer/comments/pnhtj/2132012_challenge_5_intermediate/)
 
+Challenge #6 Easy - [Pi Calculator](http://www.reddit.com/r/dailyprogrammer/comments/pp53w/2142012_challenge_6_easy/)
+
 
 Challenge #183 - [Semantic Version Sort](http://www.reddit.com/r/dailyprogrammer/comments/2igfj9/10062014_challenge_183_easy_semantic_version_sort/)

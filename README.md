@@ -37,6 +37,7 @@ Challenge #5 Intermediate - [Anagram Finder](http://www.reddit.com/r/dailyprogra
 
 Challenge #6 Easy - [Pi Calculator](http://www.reddit.com/r/dailyprogrammer/comments/pp53w/2142012_challenge_6_easy/)
 
+Challenge #6 Difficult - [Nim Player](http://www.reddit.com/r/dailyprogrammer/comments/pp7vo/2142012_challenge_6_difficult/)
 
 Challenge #183 - [Semantic Version Sort](http://www.reddit.com/r/dailyprogrammer/comments/2igfj9/10062014_challenge_183_easy_semantic_version_sort/)
 

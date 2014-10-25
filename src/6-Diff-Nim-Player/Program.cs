@@ -13,7 +13,7 @@ namespace _6_Diff_Nim_Player
         {
             DisplayStartText();
 
-            Init();
+            NimPlayer.Init();
             
             bool done = false;
             bool aiMove = false;
@@ -72,14 +72,6 @@ namespace _6_Diff_Nim_Player
         {
             Console.Write("Enter heap and quantity e.g. \"A1\":");
         }
-
-        private static void Init()
-        {
-            NimPlayer.HeapA = 3;
-            NimPlayer.HeapB = 4;
-            NimPlayer.HeapC = 5;
-        }
-
 
         private static void DisplayStartText()
         {

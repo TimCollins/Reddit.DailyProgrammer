@@ -2,7 +2,7 @@
 
 namespace _6_Diff_Nim_Player
 {
-    class NimPlayer
+    public static class NimPlayer
     {
         public static int HeapA { get; set; }
         public static int HeapB { get; set; }
@@ -89,6 +89,20 @@ namespace _6_Diff_Nim_Player
             }
 
             return _random.Next(1, HeapC + 1);
+        }
+
+        public static void Init()
+        {
+            HeapA = 3;
+            HeapB = 4;
+            HeapC = 5;
+        }
+
+        public static void Reset()
+        {
+            HeapA = 0;
+            HeapB = 0;
+            HeapC = 0;
         }
     }
 }

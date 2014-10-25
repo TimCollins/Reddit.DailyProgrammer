@@ -74,6 +74,10 @@
       <Project>{002fb344-e344-43a5-a4b4-cf0903fe9161}</Project>
       <Name>4-Int-Calculator</Name>
     </ProjectReference>
+    <ProjectReference Include="..\6-Diff-Nim-Player\6-Diff-Nim-Player.csproj">
+      <Project>{07e66cc5-08d9-4ee5-9d30-851c0ad9e963}</Project>
+      <Name>6-Diff-Nim-Player</Name>
+    </ProjectReference>
     <ProjectReference Include="..\6-Int-Remove-Dup\6-Int-Remove-Dup.csproj">
       <Project>{807149c0-a246-442f-8676-dd953410632d}</Project>
       <Name>6-Int-Remove-Dup</Name>

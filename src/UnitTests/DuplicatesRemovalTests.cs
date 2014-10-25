@@ -46,6 +46,14 @@ namespace UnitTests
             Assert.IsEmpty(output);
         }
 
+        [Test]
+        public void VerifyThreeCharMatchIsHandled()
+        {
+            string output = DuplicateRemover.Remove("helhel");
+
+            Assert.IsEmpty(output);
+        }
+
         //[Test]
         //public void VerifyMultipleDuplicatesAreRemoved()
         //{
@@ -55,7 +63,7 @@ namespace UnitTests
         //}
 
         //[Test]
-        //public void VerifyOutput()
+        //public void VerifyMultipleDifferentDuplicatesAreRemoved()
         //{
         //    string output = DuplicateRemover.Remove("aaatestBlaBlatestBlaBla");
 

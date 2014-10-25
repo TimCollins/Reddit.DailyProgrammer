@@ -43,6 +43,7 @@
     <Compile Include="DateCalculatorTests.cs" />
     <Compile Include="EventMenuTests.cs" />
     <Compile Include="IntCalculatorTests.cs" />
+    <Compile Include="NimPlayerTests.cs" />
     <Compile Include="NumComboTests.cs" />
     <Compile Include="DuplicatesRemovalTests.cs" />
     <Compile Include="SemanticVersionSortTests.cs" />

@@ -49,12 +49,18 @@ namespace _6_Diff_Nim_Player
 
                 if (NimPlayer.HeapsEmpty())
                 {
+                    DisplayResult(aiMove);
                     done = true;
                 }
             }
 
-            Console.WriteLine("Done.");
             ConsoleUtils.WaitForEscape();
+        }
+
+        private static void DisplayResult(bool aiMove)
+        {
+            Console.WriteLine("The game is over. " +
+                              (aiMove ? "The computer player has won." : "You win!"));
         }
 
         private static void ShowHeapDetails()

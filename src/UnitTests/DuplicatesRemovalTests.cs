@@ -51,7 +51,7 @@ namespace UnitTests
         {
             string output = DuplicateRemover.Remove("helhel");
 
-            Assert.IsEmpty(output);
+            Assert.AreEqual("hel", output);
         }
 
         //[Test]

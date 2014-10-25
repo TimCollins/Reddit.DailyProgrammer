@@ -11,7 +11,7 @@ Challenge #1 Easy - [Greeting](http://www.reddit.com/r/dailyprogrammer/comments/
 
 Challenge #1 Intermediate - [CRUD Operations](http://www.reddit.com/r/dailyprogrammer/comments/pihtx/intermediate_challenge_1/)
 
-Challenge #1 - Difficult [Number Guesser](http://www.reddit.com/r/dailyprogrammer/comments/pii6j/difficult_challenge_1/)
+Challenge #1 Difficult - [Number Guesser](http://www.reddit.com/r/dailyprogrammer/comments/pii6j/difficult_challenge_1/)
 
 Challenge #2 Easy - [Working Day Calculator](http://www.reddit.com/r/dailyprogrammer/comments/pjbj8/easy_challenge_2/)
 
@@ -39,3 +39,9 @@ Challenge #6 Easy - [Pi Calculator](http://www.reddit.com/r/dailyprogrammer/comm
 
 
 Challenge #183 - [Semantic Version Sort](http://www.reddit.com/r/dailyprogrammer/comments/2igfj9/10062014_challenge_183_easy_semantic_version_sort/)
+
+Incomplete
+--
+Challenge #5 Difficult - [Number Relations](http://www.reddit.com/r/dailyprogrammer/comments/pm7g7/2122012_challange_4_difficult/)
+
+Challenge #6 Intermediate - [Duplicate String Removal ](http://www.reddit.com/r/dailyprogrammer/comments/pp81n/2142012_challenge_6_intermediate/)

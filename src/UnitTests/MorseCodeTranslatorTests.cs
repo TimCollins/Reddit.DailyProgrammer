@@ -45,5 +45,34 @@ namespace UnitTests
 
             Assert.AreEqual("XYZ", output);
         }
+
+        [Test]
+        public void CanTranslateTwoWordsToASCII()
+        {
+            const string input = ".... .. / - .... . .-. .";
+
+            string output = MorseCodeTranslator.ToASCII(input);
+
+            Assert.AreEqual("HI THERE", output);
+        }
+
+        [Test]
+        public void CanTranslateThreeWordsToASCII()
+        {
+            const string input = ".... .. / - .... . .-. . / .... ..";
+
+            string output = MorseCodeTranslator.ToASCII(input);
+
+            Assert.AreEqual("HI THERE HI", output);
+        }
+
+        [Test]
+        public void RedditMorseToASCII()
+        {
+            const string input = ".... . .-.. .-.. --- / -.. .- .. .-.. -.-- / .--. .-. --- --. .-. .- -- -- . .-. / --. --- --- -.. / .-.. ..- -.-. -.- / --- -. / - .... . / -.-. .... .- .-.. .-.. . -. --. . ... / - --- -.. .- -.--";
+            string output = MorseCodeTranslator.ToASCII(input);
+
+            Assert.AreEqual("HELLO DAILY PROGRAMMER GOOD LUCK ON THE CHALLENGES TODAY", output);
+        }
     }
 }

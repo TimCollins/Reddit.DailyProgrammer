@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Text;
 
 namespace _7_Easy_Morse_Code_Translate
@@ -146,20 +147,30 @@ namespace _7_Easy_Morse_Code_Translate
             StringBuilder output = new StringBuilder();
 
             // Each morse code letter should be delimited by a space.
+            // Each word is delimited by " / "
 
-            string[] morseLetters = morseInput.Split(' ');
-
-            foreach (string s in morseLetters)
+            string[] morseWords = morseInput.Split(new[] {" / "}, StringSplitOptions.None);
+            int wordCnt = 0;
+            foreach (string word in morseWords)
             {
-                for (int i = 0; i < MorseCodeAlphabet.Count; i++)
+                string[] morseLetters = word.Split(' ');
+                foreach (string s in morseLetters)
                 {
-                    MorseCodeLetter morseCodeLetter = MorseCodeAlphabet[i];
-
-                    if (morseCodeLetter.MorseCodeChars == s)
+                    for (int i = 0; i < MorseCodeAlphabet.Count; i++)
                     {
-                        output.Append(morseCodeLetter.ASCIILetter);
-                        break;
+                        MorseCodeLetter morseCodeLetter = MorseCodeAlphabet[i];
+
+                        if (morseCodeLetter.MorseCodeChars == s)
+                        {
+                            output.Append(morseCodeLetter.ASCIILetter);
+                            break;
+                        }
                     }
+                }
+                wordCnt++;
+                if (wordCnt < morseWords.Length)
+                {
+                    output.Append(" ");
                 }
             }
 

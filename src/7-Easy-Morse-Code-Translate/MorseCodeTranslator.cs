@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Text;
 
 namespace _7_Easy_Morse_Code_Translate
 {
@@ -26,12 +27,46 @@ namespace _7_Easy_Morse_Code_Translate
 
         public static string ToASCII(string morseInput)
         {
-            return string.Empty;
+            StringBuilder output = new StringBuilder();
+
+            foreach (char c in morseInput)
+            {
+                foreach (MorseCodeLetter morseCodeLetter in MorseCodeAlphabet)
+                {
+                    if (morseCodeLetter.ASCIILetter == c)
+                    {
+                        output.Append(morseCodeLetter.ASCIILetter);
+                    }
+                }
+            }
+
+            return output.ToString();
         }
 
         public static string ToMorse(string input)
         {
-            return string.Empty;
+            StringBuilder output = new StringBuilder();
+
+            foreach (char c in input)
+            {
+                for (int i = 0; i < MorseCodeAlphabet.Count; i++)
+                {
+                    MorseCodeLetter morseCodeLetter = MorseCodeAlphabet[i];
+
+                    if (morseCodeLetter.ASCIILetter == c)
+                    {
+                        output.Append(morseCodeLetter.MorseCodeChars);
+
+                        if (i < MorseCodeAlphabet.Count - 1)
+                        {
+                            output.Append(" ");
+                        }
+                        break;
+                    }
+                }
+            }
+
+            return output.ToString();
         }
     }
 }

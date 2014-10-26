@@ -15,5 +15,15 @@ namespace UnitTests
 
             Assert.AreEqual(".- -... -.-.", output);
         }
+
+        [Test]
+        public void CanTranslateMoreToASCII()
+        {
+            const string input = ".- -... -.-.";
+
+            string output = MorseCodeTranslator.ToASCII(input);
+
+            Assert.AreEqual("ABC", output);
+        }
     }
 }

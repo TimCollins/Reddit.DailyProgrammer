@@ -29,13 +29,20 @@ namespace _7_Easy_Morse_Code_Translate
         {
             StringBuilder output = new StringBuilder();
 
-            foreach (char c in morseInput)
+            // Each morse code letter should be delimited by a space.
+
+            string[] morseLetters = morseInput.Split(' ');
+
+            foreach (string s in morseLetters)
             {
-                foreach (MorseCodeLetter morseCodeLetter in MorseCodeAlphabet)
+                for (int i = 0; i < MorseCodeAlphabet.Count; i++)
                 {
-                    if (morseCodeLetter.ASCIILetter == c)
+                    MorseCodeLetter morseCodeLetter = MorseCodeAlphabet[i];
+
+                    if (morseCodeLetter.MorseCodeChars == s)
                     {
                         output.Append(morseCodeLetter.ASCIILetter);
+                        break;
                     }
                 }
             }

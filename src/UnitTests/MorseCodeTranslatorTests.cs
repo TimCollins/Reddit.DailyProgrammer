@@ -17,13 +17,33 @@ namespace UnitTests
         }
 
         [Test]
-        public void CanTranslateMoreToASCII()
+        public void CanTranslateMorseToASCII()
         {
             const string input = ".- -... -.-.";
 
             string output = MorseCodeTranslator.ToASCII(input);
 
             Assert.AreEqual("ABC", output);
+        }
+
+        [Test]
+        public void EndOfAlphabetTestToMorse()
+        {
+            const string input = "XYZ";
+
+            string output = MorseCodeTranslator.ToMorse(input);
+
+            Assert.AreEqual("-..- -.-- --..", output);
+        }
+
+        [Test]
+        public void EndOfAlphabetTestToASCII()
+        {
+            const string input = "-..- -.-- --..";
+
+            string output = MorseCodeTranslator.ToASCII(input);
+
+            Assert.AreEqual("XYZ", output);
         }
     }
 }

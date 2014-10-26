@@ -5,8 +5,8 @@ namespace _7_Easy_Morse_Code_Translate
 {
     public static class MorseCodeTranslator
     {
-        // Need something representing the code for each letter/number
-        private static List<MorseCodeLetter> MorseCodeAlphabet = new List<MorseCodeLetter>
+        #region MorseCode Alphabet Declaration
+        private static readonly List<MorseCodeLetter> MorseCodeAlphabet = new List<MorseCodeLetter>
         {
             new MorseCodeLetter
             {
@@ -22,8 +22,124 @@ namespace _7_Easy_Morse_Code_Translate
             {
                 ASCIILetter = 'C',
                 MorseCodeChars = "-.-."
+            },
+            new MorseCodeLetter
+            {
+                ASCIILetter = 'D',
+                MorseCodeChars = "-.."
+            },
+            new MorseCodeLetter
+            {
+                ASCIILetter = 'E',
+                MorseCodeChars = "."
+            },
+            new MorseCodeLetter
+            {
+                ASCIILetter = 'F',
+                MorseCodeChars = "..-."
+            },
+            new MorseCodeLetter
+            {
+                ASCIILetter = 'G',
+                MorseCodeChars = "--."
+            },
+            new MorseCodeLetter
+            {
+                ASCIILetter = 'H',
+                MorseCodeChars = "...."
+            },
+            new MorseCodeLetter
+            {
+                ASCIILetter = 'I',
+                MorseCodeChars = ".."
+            },
+            new MorseCodeLetter
+            {
+                ASCIILetter = 'J',
+                MorseCodeChars = ".---"
+            },
+            new MorseCodeLetter
+            {
+                ASCIILetter = 'K',
+                MorseCodeChars = "-.-"
+            },
+            new MorseCodeLetter
+            {
+                ASCIILetter = 'L',
+                MorseCodeChars = ".-.."
+            },
+            new MorseCodeLetter
+            {
+                ASCIILetter = 'M',
+                MorseCodeChars = "--"
+            },
+            new MorseCodeLetter
+            {
+                ASCIILetter = 'N',
+                MorseCodeChars = "-."
+            },
+            new MorseCodeLetter
+            {
+                ASCIILetter = 'O',
+                MorseCodeChars = "---"
+            },
+            new MorseCodeLetter
+            {
+                ASCIILetter = 'P',
+                MorseCodeChars = ".--."
+            },
+            new MorseCodeLetter
+            {
+                ASCIILetter = 'Q',
+                MorseCodeChars = "--.-"
+            },
+            new MorseCodeLetter
+            {
+                ASCIILetter = 'R',
+                MorseCodeChars = ".-."
+            },
+            new MorseCodeLetter
+            {
+                ASCIILetter = 'S',
+                MorseCodeChars = "..."
+            },
+            new MorseCodeLetter
+            {
+                ASCIILetter = 'T',
+                MorseCodeChars = "-"
+            },
+            new MorseCodeLetter
+            {
+                ASCIILetter = 'U',
+                MorseCodeChars = "..-"
+            },
+            new MorseCodeLetter
+            {
+                ASCIILetter = 'V',
+                MorseCodeChars = "...-"
+            },
+            new MorseCodeLetter
+            {
+                ASCIILetter = 'W',
+                MorseCodeChars = ".--"
+            },
+            new MorseCodeLetter
+            {
+                ASCIILetter = 'X',
+                MorseCodeChars = "-..-"
+            },
+            new MorseCodeLetter
+            {
+                ASCIILetter = 'Y',
+                MorseCodeChars = "-.--"
+            },
+            new MorseCodeLetter
+            {
+                ASCIILetter = 'Z',
+                MorseCodeChars = "--.."
             }
         };
+        #endregion
 
         public static string ToASCII(string morseInput)
         {
@@ -53,6 +169,7 @@ namespace _7_Easy_Morse_Code_Translate
         public static string ToMorse(string input)
         {
             StringBuilder output = new StringBuilder();
+            int cnt = 0;
 
             foreach (char c in input)
             {
@@ -64,10 +181,12 @@ namespace _7_Easy_Morse_Code_Translate
                     {
                         output.Append(morseCodeLetter.MorseCodeChars);
 
-                        if (i < MorseCodeAlphabet.Count - 1)
+                        if (cnt < input.Length - 1)
                         {
                             output.Append(" ");
                         }
+
+                        cnt++;
                         break;
                     }
                 }

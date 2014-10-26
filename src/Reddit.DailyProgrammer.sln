@@ -43,6 +43,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "6-Diff-Nim-Player", "6-Diff
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7-Easy-Morse-Code-Translate", "7-Easy-Morse-Code-Translate\7-Easy-Morse-Code-Translate.csproj", "{80B218DE-AF86-48C8-B585-9309BD9D010A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7-Int-Image-Gen", "7-Int-Image-Gen\7-Int-Image-Gen.csproj", "{0B5F16D9-41FC-462D-A39A-FE634763CE36}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -133,6 +135,10 @@ Global
 		{80B218DE-AF86-48C8-B585-9309BD9D010A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{80B218DE-AF86-48C8-B585-9309BD9D010A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{80B218DE-AF86-48C8-B585-9309BD9D010A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B5F16D9-41FC-462D-A39A-FE634763CE36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B5F16D9-41FC-462D-A39A-FE634763CE36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B5F16D9-41FC-462D-A39A-FE634763CE36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B5F16D9-41FC-462D-A39A-FE634763CE36}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

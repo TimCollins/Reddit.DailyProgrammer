@@ -180,26 +180,38 @@ namespace _7_Easy_Morse_Code_Translate
         public static string ToMorse(string input)
         {
             StringBuilder output = new StringBuilder();
-            int cnt = 0;
 
-            foreach (char c in input)
+            string[] words = input.Split(' ');
+            int wordCnt = 0;
+
+            foreach (string word in words)
             {
-                for (int i = 0; i < MorseCodeAlphabet.Count; i++)
+                int letterCnt = 0;
+                foreach (char c in word)
                 {
-                    MorseCodeLetter morseCodeLetter = MorseCodeAlphabet[i];
-
-                    if (morseCodeLetter.ASCIILetter == c)
+                    for (int i = 0; i < MorseCodeAlphabet.Count; i++)
                     {
-                        output.Append(morseCodeLetter.MorseCodeChars);
+                        MorseCodeLetter morseCodeLetter = MorseCodeAlphabet[i];
 
-                        if (cnt < input.Length - 1)
+                        if (morseCodeLetter.ASCIILetter == c)
                         {
-                            output.Append(" ");
-                        }
+                            output.Append(morseCodeLetter.MorseCodeChars);
 
-                        cnt++;
-                        break;
+                            if (letterCnt < word.Length - 1)
+                            {
+                                output.Append(" ");
+                            }
+
+                            letterCnt++;
+                            break;
+                        }
                     }
+                }
+
+                wordCnt++;
+                if (wordCnt < words.Length)
+                {
+                    output.Append(" / ");
                 }
             }
 

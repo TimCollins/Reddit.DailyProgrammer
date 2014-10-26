@@ -67,6 +67,26 @@ namespace UnitTests
         }
 
         [Test]
+        public void CanTranslateTwoWordsToMorse()
+        {
+            const string input = "HI THERE";
+
+            string output = MorseCodeTranslator.ToMorse(input);
+
+            Assert.AreEqual(".... .. / - .... . .-. .", output);
+        }
+
+        [Test]
+        public void CanTranslateThreeWordsToMorse()
+        {
+            const string input = "HI THERE HI";
+
+            string output = MorseCodeTranslator.ToMorse(input);
+
+            Assert.AreEqual(".... .. / - .... . .-. . / .... ..", output);
+        }
+
+        [Test]
         public void RedditMorseToASCII()
         {
             const string input = ".... . .-.. .-.. --- / -.. .- .. .-.. -.-- / .--. .-. --- --. .-. .- -- -- . .-. / --. --- --- -.. / .-.. ..- -.-. -.- / --- -. / - .... . / -.-. .... .- .-.. .-.. . -. --. . ... / - --- -.. .- -.--";

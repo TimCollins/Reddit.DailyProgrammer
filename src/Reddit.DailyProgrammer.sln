@@ -41,6 +41,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "6-Int-Remove-Dup", "6-Int-R
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "6-Diff-Nim-Player", "6-Diff-Nim-Player\6-Diff-Nim-Player.csproj", "{07E66CC5-08D9-4EE5-9D30-851C0AD9E963}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7-Easy-Morse-Code-Translate", "7-Easy-Morse-Code-Translate\7-Easy-Morse-Code-Translate.csproj", "{80B218DE-AF86-48C8-B585-9309BD9D010A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -127,6 +129,10 @@ Global
 		{07E66CC5-08D9-4EE5-9D30-851C0AD9E963}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{07E66CC5-08D9-4EE5-9D30-851C0AD9E963}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{07E66CC5-08D9-4EE5-9D30-851C0AD9E963}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80B218DE-AF86-48C8-B585-9309BD9D010A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80B218DE-AF86-48C8-B585-9309BD9D010A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80B218DE-AF86-48C8-B585-9309BD9D010A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80B218DE-AF86-48C8-B585-9309BD9D010A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

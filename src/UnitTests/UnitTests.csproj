@@ -43,6 +43,7 @@
     <Compile Include="DateCalculatorTests.cs" />
     <Compile Include="EventMenuTests.cs" />
     <Compile Include="IntCalculatorTests.cs" />
+    <Compile Include="MorseCodeTranslatorTests.cs" />
     <Compile Include="NimPlayerTests.cs" />
     <Compile Include="NumComboTests.cs" />
     <Compile Include="DuplicatesRemovalTests.cs" />
@@ -81,6 +82,10 @@
     <ProjectReference Include="..\6-Int-Remove-Dup\6-Int-Remove-Dup.csproj">
       <Project>{807149c0-a246-442f-8676-dd953410632d}</Project>
       <Name>6-Int-Remove-Dup</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\7-Easy-Morse-Code-Translate\7-Easy-Morse-Code-Translate.csproj">
+      <Project>{80b218de-af86-48c8-b585-9309bd9d010a}</Project>
+      <Name>7-Easy-Morse-Code-Translate</Name>
     </ProjectReference>
     <ProjectReference Include="..\SemanticVersionSort\SemanticVersionSort.csproj">
       <Project>{2ec4158f-2e60-4e7b-b2a8-32130c3f09c1}</Project>

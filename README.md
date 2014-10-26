@@ -39,6 +39,8 @@ Challenge #6 Easy - [Pi Calculator](http://www.reddit.com/r/dailyprogrammer/comm
 
 Challenge #6 Difficult - [Nim Player](http://www.reddit.com/r/dailyprogrammer/comments/pp7vo/2142012_challenge_6_difficult/)
 
+Challenge #7 Easy - [Morse Code To ASCII Converter](http://www.reddit.com/r/dailyprogrammer/comments/pr2xr/2152012_challenge_7_easy/)
+
 Challenge #183 - [Semantic Version Sort](http://www.reddit.com/r/dailyprogrammer/comments/2igfj9/10062014_challenge_183_easy_semantic_version_sort/)
 
 Incomplete

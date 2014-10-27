@@ -50,8 +50,11 @@ Challenge #183 - [Semantic Version Sort](http://www.reddit.com/r/dailyprogrammer
 
 Incomplete
 --
-Challenge #5 Difficult - [Number Relations](http://www.reddit.com/r/dailyprogrammer/comments/pm7g7/2122012_challange_4_difficult/)
+Challenge #5 Difficult - [Pirate Game](http://www.reddit.com/r/dailyprogrammer/comments/pniaw/2132012_challenge_5_difficult/)
+**Reason:** Unclear specifications.
 
 Challenge #6 Intermediate - [Duplicate String Removal ](http://www.reddit.com/r/dailyprogrammer/comments/pp81n/2142012_challenge_6_intermediate/)
+**Reason:** Unclear specifications.
 
 Challenge #7 Difficult - [Reddit Login Bot](http://www.reddit.com/r/dailyprogrammer/comments/pr4vo/2152012_challenge_7_difficult/)
+**Reason:** Looks like an interesting project but I don't have a Reddit login.

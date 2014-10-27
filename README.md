@@ -44,6 +44,8 @@ Challenge #7 Easy - [Morse Code To ASCII Converter](http://www.reddit.com/r/dail
 Challenge #7 Intermediate - [Recursive Image Drawing](http://www.reddit.com/r/dailyprogrammer/comments/pr265/2152012_challenge_7_intermediate/)
 *NB:* This is a Windows Forms app.
 
+Challenge #8 Easy - [99 Bottles of Beer](http://www.reddit.com/r/dailyprogrammer/comments/pserp/2162012_challenge_8_easy/)
+
 Challenge #183 - [Semantic Version Sort](http://www.reddit.com/r/dailyprogrammer/comments/2igfj9/10062014_challenge_183_easy_semantic_version_sort/)
 
 Incomplete
@@ -51,3 +53,5 @@ Incomplete
 Challenge #5 Difficult - [Number Relations](http://www.reddit.com/r/dailyprogrammer/comments/pm7g7/2122012_challange_4_difficult/)
 
 Challenge #6 Intermediate - [Duplicate String Removal ](http://www.reddit.com/r/dailyprogrammer/comments/pp81n/2142012_challenge_6_intermediate/)
+
+Challenge #7 Difficult - [Reddit Login Bot](http://www.reddit.com/r/dailyprogrammer/comments/pr4vo/2152012_challenge_7_difficult/)

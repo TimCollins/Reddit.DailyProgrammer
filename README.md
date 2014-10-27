@@ -41,7 +41,7 @@ Challenge #6 Difficult - [Nim Player](http://www.reddit.com/r/dailyprogrammer/co
 
 Challenge #7 Easy - [Morse Code To ASCII Converter](http://www.reddit.com/r/dailyprogrammer/comments/pr2xr/2152012_challenge_7_easy/)
 
-Challenge #7 Intermediate - [Recursive Image Drawing](http://www.reddit.com/r/dailyprogrammer/comments/pr265/2152012_challenge_7_intermediate/)
+Challenge #7 Intermediate - [Recursive Image Drawing](http://www.reddit.com/r/dailyprogrammer/comments/pr265/2152012_challenge_7_intermediate/)  
 **NB:** This is a Windows Forms app.
 
 Challenge #8 Easy - [99 Bottles of Beer](http://www.reddit.com/r/dailyprogrammer/comments/pserp/2162012_challenge_8_easy/)

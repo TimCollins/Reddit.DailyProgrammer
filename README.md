@@ -42,7 +42,7 @@ Challenge #6 Difficult - [Nim Player](http://www.reddit.com/r/dailyprogrammer/co
 Challenge #7 Easy - [Morse Code To ASCII Converter](http://www.reddit.com/r/dailyprogrammer/comments/pr2xr/2152012_challenge_7_easy/)
 
 Challenge #7 Intermediate - [Recursive Image Drawing](http://www.reddit.com/r/dailyprogrammer/comments/pr265/2152012_challenge_7_intermediate/)
-*NB:* This is a Windows Forms app.
+**NB:** This is a Windows Forms app.
 
 Challenge #8 Easy - [99 Bottles of Beer](http://www.reddit.com/r/dailyprogrammer/comments/pserp/2162012_challenge_8_easy/)
 
@@ -50,11 +50,11 @@ Challenge #183 - [Semantic Version Sort](http://www.reddit.com/r/dailyprogrammer
 
 Incomplete
 --
-Challenge #5 Difficult - [Pirate Game](http://www.reddit.com/r/dailyprogrammer/comments/pniaw/2132012_challenge_5_difficult/)
+Challenge #5 Difficult - [Pirate Game](http://www.reddit.com/r/dailyprogrammer/comments/pniaw/2132012_challenge_5_difficult/)  
 **Reason:** Unclear specifications.
 
-Challenge #6 Intermediate - [Duplicate String Removal ](http://www.reddit.com/r/dailyprogrammer/comments/pp81n/2142012_challenge_6_intermediate/)
+Challenge #6 Intermediate - [Duplicate String Removal ](http://www.reddit.com/r/dailyprogrammer/comments/pp81n/2142012_challenge_6_intermediate/)  
 **Reason:** Unclear specifications.
 
-Challenge #7 Difficult - [Reddit Login Bot](http://www.reddit.com/r/dailyprogrammer/comments/pr4vo/2152012_challenge_7_difficult/)
+Challenge #7 Difficult - [Reddit Login Bot](http://www.reddit.com/r/dailyprogrammer/comments/pr4vo/2152012_challenge_7_difficult/)  
 **Reason:** Looks like an interesting project but I don't have a Reddit login.

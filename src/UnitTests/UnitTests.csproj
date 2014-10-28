@@ -45,6 +45,7 @@
     <Compile Include="IntCalculatorTests.cs" />
     <Compile Include="MorseCodeTranslatorTests.cs" />
     <Compile Include="NimPlayerTests.cs" />
+    <Compile Include="NumbersToEnglishTests.cs" />
     <Compile Include="NumComboTests.cs" />
     <Compile Include="DuplicatesRemovalTests.cs" />
     <Compile Include="SemanticVersionSortTests.cs" />
@@ -86,6 +87,10 @@
     <ProjectReference Include="..\7-Easy-Morse-Code-Translate\7-Easy-Morse-Code-Translate.csproj">
       <Project>{80b218de-af86-48c8-b585-9309bd9d010a}</Project>
       <Name>7-Easy-Morse-Code-Translate</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\8-Int-Numbers-To-English\8-Int-Numbers-To-English.csproj">
+      <Project>{bffe6184-a95d-498d-be65-7c2d3422801f}</Project>
+      <Name>8-Int-Numbers-To-English</Name>
     </ProjectReference>
     <ProjectReference Include="..\SemanticVersionSort\SemanticVersionSort.csproj">
       <Project>{2ec4158f-2e60-4e7b-b2a8-32130c3f09c1}</Project>

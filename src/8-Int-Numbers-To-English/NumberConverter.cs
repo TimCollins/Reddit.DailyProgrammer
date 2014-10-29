@@ -1,4 +1,6 @@
-﻿namespace _8_Int_Numbers_To_English
+﻿using System;
+
+namespace _8_Int_Numbers_To_English
 {
     public static class NumberConverter
     {
@@ -7,6 +9,17 @@
             // Need to break the number down into unit, tens, hundreds.
             // 100 / 10 = 10
             // 100 % 10 = 0
+
+            if (number / 10 == 0)
+            {
+                return DoSingleDigit(number);
+            }
+
+            return string.Empty;
+        }
+
+        private static string DoSingleDigit(int number)
+        {
             switch (number)
             {
                 case 0:
@@ -31,7 +44,7 @@
                     return "nine";
             }
 
-            return string.Empty;
+            throw new ArgumentException("number");
         }
     }
 }

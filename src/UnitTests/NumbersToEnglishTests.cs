@@ -7,11 +7,19 @@ namespace UnitTests
     class NumbersToEnglishTests
     {
         [Test]
-        public void CanDoSingleNumber()
+        public void CanDoSingleNumberLow()
         {
             string output = NumberConverter.Convert(1);
 
             Assert.AreEqual("one", output);
+        }
+
+        [Test]
+        public void CanDoSingleNumberHigh()
+        {
+            string output = NumberConverter.Convert(9);
+
+            Assert.AreEqual("nine", output);
         }
     }
 }

@@ -17,9 +17,9 @@ namespace UnitTests
         [Test]
         public void CanDoSingleNumberHigh()
         {
-            string output = NumberConverter.Convert(9);
+            string output = NumberConverter.Convert(19);
 
-            Assert.AreEqual("nine", output);
+            Assert.AreEqual("nineteen", output);
         }
     }
 }

@@ -10,15 +10,16 @@ namespace _8_Int_Numbers_To_English
             // 100 / 10 = 10
             // 100 % 10 = 0
 
-            if (number / 10 == 0)
+            // Numbers up to 20 are special cases I think.
+            if (number < 20)
             {
-                return DoSingleDigit(number);
+                return DoSpecialNumbers(number);
             }
 
             return string.Empty;
         }
 
-        private static string DoSingleDigit(int number)
+        private static string DoSpecialNumbers(int number)
         {
             switch (number)
             {
@@ -42,6 +43,26 @@ namespace _8_Int_Numbers_To_English
                     return "eight";
                 case 9:
                     return "nine";
+                case 10:
+                    return "ten";
+                case 11:
+                    return "eleven";
+                case 12:
+                    return "twelve";
+                case 13:
+                    return "thirteen";
+                case 14:
+                    return "fourteen";
+                case 15:
+                    return "fifteen";
+                case 16:
+                    return "sixteen";
+                case 17:
+                    return "seventeen";
+                case 18:
+                    return "eighteen";
+                case 19:
+                    return "nineteen";
             }
 
             throw new ArgumentException("number");

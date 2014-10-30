@@ -21,5 +21,38 @@ namespace UnitTests
 
             Assert.AreEqual("nineteen", output);
         }
+
+        [Test]
+        public void CanReturnTwentyFive()
+        {
+            string output = NumberConverter.Convert(25);
+
+            Assert.AreEqual("twenty five", output);
+        }
+
+        [Test]
+        public void CanReturnFortyTwo()
+        {
+            string output = NumberConverter.Convert(42);
+
+            Assert.AreEqual("forty two", output);
+        }
+
+        [Test]
+        public void CanReturnSixtySix()
+        {
+            string output = NumberConverter.Convert(66);
+
+            Assert.AreEqual("sixty six", output);
+        }
+
+        [Test]
+        public void CanReturnNinetyNine()
+        {
+            string output = NumberConverter.Convert(99);
+
+            Assert.AreEqual("ninety nine", output);
+        }
+
     }
 }

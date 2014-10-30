@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 namespace _8_Int_Numbers_To_English
 {
@@ -13,13 +14,35 @@ namespace _8_Int_Numbers_To_English
             // Numbers up to 20 are special cases I think.
             if (number < 20)
             {
-                return DoSpecialNumbers(number);
+                return GetOnesValue(number);
             }
 
-            return string.Empty;
+            // Using 25 as an example, need to find which is the second digit and get the modulus.
+            // So we check if it's less than 100 and while it's less than 100, get the mod.
+            // When the mod < 10 we have the value 
+            // 25 < 100 so start by doing 25 mod 90
+            // It's > 10 so do 25 mod 80.
+            // It's > 10 so do 25 mod 70 etc.
+            // 25 % 20 = 5 so we know now that 20 is our tens column
+            // We take the remainder (5) as our ones column.
+            int divisor = 90;
+            int modulus = number % divisor;
+
+            while (modulus > 10)
+            {
+                divisor -= 10;
+                modulus = number % divisor;
+            }
+
+            StringBuilder output = new StringBuilder();
+
+            output.Append(GetTensValue(divisor));
+            output.Append(" " + GetOnesValue(modulus));
+
+            return output.ToString();
         }
 
-        private static string DoSpecialNumbers(int number)
+        private static string GetOnesValue(int number)
         {
             switch (number)
             {
@@ -67,5 +90,33 @@ namespace _8_Int_Numbers_To_English
 
             throw new ArgumentException("number");
         }
+
+        private static string GetTensValue(int number)
+        {
+            switch (number)
+            {
+                case 10:
+                    return "ten";
+                case 20:
+                    return "twenty";
+                case 30:
+                    return "thirty";
+                case 40:
+                    return "forty";
+                case 50:
+                    return "fifty";
+                case 60:
+                    return "sixty";
+                case 70:
+                    return "seventy";
+                case 80:
+                    return "eighty";
+                case 90:
+                    return "ninety";
+            }
+
+            throw new ArgumentException("number");
+        }
+
     }
 }

@@ -7,39 +7,76 @@ namespace _8_Int_Numbers_To_English
     {
         public static string Convert(int number)
         {
-            // Need to break the number down into unit, tens, hundreds.
-            // 100 / 10 = 10
-            // 100 % 10 = 0
-
-            // Numbers up to 20 are special cases I think.
-            if (number < 20)
-            {
-                return GetOnesValue(number);
-            }
-
-            // Using 25 as an example, need to find which is the second digit and get the modulus.
-            // So we check if it's less than 100 and while it's less than 100, get the mod.
-            // When the mod < 10 we have the value 
-            // 25 < 100 so start by doing 25 mod 90
-            // It's > 10 so do 25 mod 80.
-            // It's > 10 so do 25 mod 70 etc.
-            // 25 % 20 = 5 so we know now that 20 is our tens column
-            // We take the remainder (5) as our ones column.
-            int divisor = 90;
-            int modulus = number % divisor;
-
-            while (modulus > 10)
-            {
-                divisor -= 10;
-                modulus = number % divisor;
-            }
-
             StringBuilder output = new StringBuilder();
 
-            output.Append(GetTensValue(divisor));
-            output.Append(" " + GetOnesValue(modulus));
+            if (number < 20)
+            {
+                output.Append(GetOnesValue(number));
+            }
+            else if (number < 100)
+            {
+                int divisor = 90;
+                int modulus = number % divisor;
+
+                while (modulus > 10)
+                {
+                    divisor -= 10;
+                    modulus = number % divisor;
+                }
+
+                output.Append(GetTensValue(divisor));
+                output.Append(" " + GetOnesValue(modulus));
+            }
+            else if (number < 999)
+            {
+                int divisor = 900;
+                int modulus = number % divisor;
+
+                while (modulus > 100)
+                {
+                    divisor -= 100;
+                    modulus = number % divisor;
+                }
+
+                output.Append(GetHundredsValue(divisor));
+
+                // Need to perform a conversion on this value now.
+                // This should fix the 256 test case as we can get 200 and we already know that
+                // 2 digit numbers are working.
+                //output.Append(GetTensValue(divisor));
+                    
+                output.Append(" and " + GetOnesValue(modulus));
+            }
 
             return output.ToString();
+        }
+
+        private static string GetHundredsValue(int number)
+        {
+
+            switch (number)
+            {
+                case 100:
+                    return "one hundred";
+                case 200:
+                    return "two hundred";
+                case 300:
+                    return "three hundred";
+                case 400:
+                    return "four hundred";
+                case 500:
+                    return "five hundred";
+                case 600:
+                    return "six hundred";
+                case 700:
+                    return "seven hundred";
+                case 800:
+                    return "eight hundred";
+                case 900:
+                    return "nine hundred";
+            }
+
+            throw new ArgumentException("number");
         }
 
         private static string GetOnesValue(int number)

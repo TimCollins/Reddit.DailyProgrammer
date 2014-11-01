@@ -7,6 +7,14 @@ namespace UnitTests
     class NumbersToEnglishTests
     {
         [Test]
+        public void CanDoSingleNumberLowest()
+        {
+            string output = NumberConverter.Convert(0);
+
+            Assert.AreEqual("zero", output);
+        }
+
+        [Test]
         public void CanDoSingleNumberLow()
         {
             string output = NumberConverter.Convert(1);
@@ -111,12 +119,19 @@ namespace UnitTests
         }
 
         [Test]
+        public void CanReturnNineThousandNineHundredAndNinetyNine()
+        {
+            string output = NumberConverter.Convert(9999);
+
+            Assert.AreEqual("nine thousand nine hundred and ninety nine", output);
+        }
+
+        [Test]
         public void VerifyRedditTest1()
         {
             string output = NumberConverter.Convert(1211);
 
             Assert.AreEqual("one thousand two hundred and eleven", output);
         }
-
     }
 }

@@ -20,10 +20,8 @@ namespace _8_Int_Numbers_To_English
 
                 output.Append(GetTensValue(tens));
                 output.Append(" " + GetOnesValue(ones));
-
-                //CalculateAndAppendTensAndOnes(number, output);
             }
-            else if (number < 999)
+            else if (number < 1000)
             {
                 int divisor = 900;
                 int modulus = number % divisor;
@@ -43,7 +41,6 @@ namespace _8_Int_Numbers_To_English
 
                     output.Append(" and " + GetTensValue(tens));
                     output.Append(" " + GetOnesValue(ones));
-                    //CalculateAndAppendTensAndOnes(modulus, output);   
                 }
                 else
                 {
@@ -68,21 +65,6 @@ namespace _8_Int_Numbers_To_English
             tens = divisor;
             ones = modulus;
         }
-
-        //private static void CalculateAndAppendTensAndOnes(int number, StringBuilder output)
-        //{
-        //    int divisor = 90;
-        //    int modulus = number % divisor;
-
-        //    while (modulus > 10)
-        //    {
-        //        divisor -= 10;
-        //        modulus = number % divisor;
-        //    }
-
-        //    output.Append(GetTensValue(divisor));
-        //    output.Append(" " + GetOnesValue(modulus));
-        //}
 
         private static string GetHundredsValue(int number)
         {

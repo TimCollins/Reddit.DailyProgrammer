@@ -52,7 +52,7 @@ namespace _8_Int_Numbers_To_English
                 int divisor = 9000;
                 int modulus = number % divisor;
 
-                while (modulus > 1000)
+                while (modulus > 999)
                 {
                     divisor -= 100;
                     modulus = number % divisor;
@@ -66,7 +66,10 @@ namespace _8_Int_Numbers_To_English
                     modulus = number % divisor;
                 }
 
-                output.Append(GetHundredsValue(divisor));
+                if (modulus > 99)
+                {
+                    output.Append(GetHundredsValue(divisor));
+                }                
 
                 if (modulus > 19)
                 {

@@ -55,6 +55,14 @@ namespace UnitTests
         }
 
         [Test]
+        public void CanReturnOneHundred()
+        {
+            string output = NumberConverter.Convert(100);
+
+            Assert.AreEqual("one hundred", output);
+        }
+
+        [Test]
         public void CanReturnOneHundredAndFive()
         {
             string output = NumberConverter.Convert(105);
@@ -86,13 +94,29 @@ namespace UnitTests
             Assert.AreEqual("nine hundred and ninety nine", output);
         }
 
-        //[Test]
-        //public void VerifyRedditTest1()
-        //{
-        //    string output = NumberConverter.Convert(1211);
+        [Test]
+        public void CanReturnOneThousand()
+        {
+            string output = NumberConverter.Convert(1000);
 
-        //    Assert.AreEqual("one thousand two hundred and eleven", output);
-        //}
+            Assert.AreEqual("one thousand", output);
+        }
+
+        [Test]
+        public void CanReturnOneThousandAndTwentyFour()
+        {
+            string output = NumberConverter.Convert(1024);
+
+            Assert.AreEqual("one thousand and twenty four", output);
+        }
+
+        [Test]
+        public void VerifyRedditTest1()
+        {
+            string output = NumberConverter.Convert(1211);
+
+            Assert.AreEqual("one thousand two hundred and eleven", output);
+        }
 
     }
 }

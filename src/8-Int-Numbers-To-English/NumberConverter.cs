@@ -26,6 +26,40 @@ namespace _8_Int_Numbers_To_English
                 int divisor = 900;
                 int modulus = number % divisor;
 
+                while (modulus > 99)
+                {
+                    divisor -= 100;
+                    modulus = number % divisor;
+                }
+
+                output.Append(GetHundredsValue(divisor));
+
+                if (modulus > 19)
+                {
+                    int tens, ones;
+                    CalculateTensAndOnes(modulus, out tens, out ones);
+
+                    output.Append(" and " + GetTensValue(tens));
+                    output.Append(" " + GetOnesValue(ones));
+                }
+                else if (modulus > 0)
+                {
+                    output.Append(" and " + GetOnesValue(modulus));
+                }
+            }
+            else if (number < 10000)
+            {
+                int divisor = 9000;
+                int modulus = number % divisor;
+
+                while (modulus > 1000)
+                {
+                    divisor -= 100;
+                    modulus = number % divisor;
+                }
+
+                output.Append(GetThousandsValue(divisor));
+
                 while (modulus > 100)
                 {
                     divisor -= 100;
@@ -42,9 +76,9 @@ namespace _8_Int_Numbers_To_English
                     output.Append(" and " + GetTensValue(tens));
                     output.Append(" " + GetOnesValue(ones));
                 }
-                else
+                else if (modulus > 0)
                 {
-                    output.Append(" and " + GetOnesValue(modulus));    
+                    output.Append(" and " + GetOnesValue(modulus));
                 }
             }
 
@@ -64,33 +98,6 @@ namespace _8_Int_Numbers_To_English
 
             tens = divisor;
             ones = modulus;
-        }
-
-        private static string GetHundredsValue(int number)
-        {
-            switch (number)
-            {
-                case 100:
-                    return "one hundred";
-                case 200:
-                    return "two hundred";
-                case 300:
-                    return "three hundred";
-                case 400:
-                    return "four hundred";
-                case 500:
-                    return "five hundred";
-                case 600:
-                    return "six hundred";
-                case 700:
-                    return "seven hundred";
-                case 800:
-                    return "eight hundred";
-                case 900:
-                    return "nine hundred";
-            }
-
-            throw new ArgumentException("number");
         }
 
         private static string GetOnesValue(int number)
@@ -169,5 +176,58 @@ namespace _8_Int_Numbers_To_English
             throw new ArgumentException("number");
         }
 
+        private static string GetHundredsValue(int number)
+        {
+            switch (number)
+            {
+                case 100:
+                    return "one hundred";
+                case 200:
+                    return "two hundred";
+                case 300:
+                    return "three hundred";
+                case 400:
+                    return "four hundred";
+                case 500:
+                    return "five hundred";
+                case 600:
+                    return "six hundred";
+                case 700:
+                    return "seven hundred";
+                case 800:
+                    return "eight hundred";
+                case 900:
+                    return "nine hundred";
+            }
+
+            throw new ArgumentException("number");
+        }
+
+        private static string GetThousandsValue(int number)
+        {
+            switch (number)
+            {
+                case 1000:
+                    return "one thousand";
+                case 2000:
+                    return "two thousand";
+                case 3000:
+                    return "three thousand";
+                case 4000:
+                    return "four thousand";
+                case 5000:
+                    return "five thousand";
+                case 6000:
+                    return "six thousand";
+                case 7000:
+                    return "seven thousand";
+                case 8000:
+                    return "eight thousand";
+                case 9000:
+                    return "nine thousand";
+            }
+            
+            throw new ArgumentException("number");
+        }
     }
 }

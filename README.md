@@ -46,6 +46,9 @@ Challenge #7 Intermediate - [Recursive Image Drawing](http://www.reddit.com/r/da
 
 Challenge #8 Easy - [99 Bottles of Beer](http://www.reddit.com/r/dailyprogrammer/comments/pserp/2162012_challenge_8_easy/)
 
+Challenge #8 Intermediate - [Digits to English](http://www.reddit.com/r/dailyprogrammer/comments/psewf/2162012_challenge_8_intermediate/)
+
+
 Challenge #183 - [Semantic Version Sort](http://www.reddit.com/r/dailyprogrammer/comments/2igfj9/10062014_challenge_183_easy_semantic_version_sort/)
 
 Incomplete

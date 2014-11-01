@@ -54,16 +54,29 @@ namespace _8_Int_Numbers_To_English
 
                 while (modulus > 999)
                 {
-                    divisor -= 100;
+                    divisor -= 1000;
                     modulus = number % divisor;
                 }
 
                 output.Append(GetThousandsValue(divisor));
 
+                if (modulus == 0)
+                {
+                    return output.ToString();
+                }
+
+                number = modulus;
+                divisor = 900;
+                modulus = number % divisor;
                 while (modulus > 100)
                 {
                     divisor -= 100;
                     modulus = number % divisor;
+                }
+
+                if (divisor > 0)
+                {
+                    output.Append(" " + GetHundredsValue(divisor));
                 }
 
                 if (modulus > 99)

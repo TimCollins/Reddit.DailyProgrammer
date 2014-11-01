@@ -55,6 +55,14 @@ namespace UnitTests
         }
 
         [Test]
+        public void CanReturnNineHundredAndNinetyEight()
+        {
+            string output = NumberConverter.Convert(998);
+
+            Assert.AreEqual("nine hundred and ninety eight", output);
+        }
+
+        [Test]
         public void CanReturnOneHundredAndFive()
         {
             string output = NumberConverter.Convert(105);
@@ -69,6 +77,14 @@ namespace UnitTests
 
             Assert.AreEqual("two hundred and fifty six", output);
         }
+
+        //[Test]
+        //public void VerifyRedditTest1()
+        //{
+        //    string output = NumberConverter.Convert(1211);
+
+        //    Assert.AreEqual("one thousand two hundred and eleven", output);
+        //}
 
     }
 }

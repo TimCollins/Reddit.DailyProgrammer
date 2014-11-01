@@ -15,17 +15,13 @@ namespace _8_Int_Numbers_To_English
             }
             else if (number < 100)
             {
-                int divisor = 90;
-                int modulus = number % divisor;
+                int tens, ones;
+                CalculateTensAndOnes(number, out tens, out ones);
 
-                while (modulus > 10)
-                {
-                    divisor -= 10;
-                    modulus = number % divisor;
-                }
+                output.Append(GetTensValue(tens));
+                output.Append(" " + GetOnesValue(ones));
 
-                output.Append(GetTensValue(divisor));
-                output.Append(" " + GetOnesValue(modulus));
+                //CalculateAndAppendTensAndOnes(number, output);
             }
             else if (number < 999)
             {
@@ -40,20 +36,56 @@ namespace _8_Int_Numbers_To_English
 
                 output.Append(GetHundredsValue(divisor));
 
-                // Need to perform a conversion on this value now.
-                // This should fix the 256 test case as we can get 200 and we already know that
-                // 2 digit numbers are working.
-                //output.Append(GetTensValue(divisor));
-                    
-                output.Append(" and " + GetOnesValue(modulus));
+                if (modulus > 19)
+                {
+                    int tens, ones;
+                    CalculateTensAndOnes(modulus, out tens, out ones);
+
+                    output.Append(" and " + GetTensValue(tens));
+                    output.Append(" " + GetOnesValue(ones));
+                    //CalculateAndAppendTensAndOnes(modulus, output);   
+                }
+                else
+                {
+                    output.Append(" and " + GetOnesValue(modulus));    
+                }
             }
 
             return output.ToString();
         }
 
+        private static void CalculateTensAndOnes(int number, out int tens, out int ones)
+        {
+            int divisor = 90;
+            int modulus = number % divisor;
+
+            while (modulus > 10)
+            {
+                divisor -= 10;
+                modulus = number % divisor;
+            }
+
+            tens = divisor;
+            ones = modulus;
+        }
+
+        //private static void CalculateAndAppendTensAndOnes(int number, StringBuilder output)
+        //{
+        //    int divisor = 90;
+        //    int modulus = number % divisor;
+
+        //    while (modulus > 10)
+        //    {
+        //        divisor -= 10;
+        //        modulus = number % divisor;
+        //    }
+
+        //    output.Append(GetTensValue(divisor));
+        //    output.Append(" " + GetOnesValue(modulus));
+        //}
+
         private static string GetHundredsValue(int number)
         {
-
             switch (number)
             {
                 case 100:

@@ -65,24 +65,22 @@ namespace _8_Int_Numbers_To_English
                     return output.ToString();
                 }
 
-                number = modulus;
-                divisor = 900;
-                modulus = number % divisor;
-                while (modulus > 100)
-                {
-                    divisor -= 100;
-                    modulus = number % divisor;
-                }
-
-                if (divisor > 0)
-                {
-                    output.Append(" " + GetHundredsValue(divisor));
-                }
-
                 if (modulus > 99)
                 {
-                    output.Append(GetHundredsValue(divisor));
-                }                
+                    divisor = 900;
+                    number = modulus;
+                    modulus = number % divisor;
+                    while (modulus > 100)
+                    {
+                        divisor -= 100;
+                        modulus = number % divisor;
+                    }
+
+                    if (divisor > 0)
+                    {
+                        output.Append(" " + GetHundredsValue(divisor));
+                    }
+                }
 
                 if (modulus > 19)
                 {

@@ -49,6 +49,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "8-Easy-Bottles-of-Beer", "8
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "8-Int-Numbers-To-English", "8-Int-Numbers-To-English\8-Int-Numbers-To-English.csproj", "{BFFE6184-A95D-498D-BE65-7C2D3422801F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "8-Diff-Pascal-Triangle", "8-Diff-Pascal-Triangle\8-Diff-Pascal-Triangle.csproj", "{DDA07A8C-D616-47B4-813D-5B1193D1F265}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -151,6 +153,10 @@ Global
 		{BFFE6184-A95D-498D-BE65-7C2D3422801F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BFFE6184-A95D-498D-BE65-7C2D3422801F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BFFE6184-A95D-498D-BE65-7C2D3422801F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDA07A8C-D616-47B4-813D-5B1193D1F265}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDA07A8C-D616-47B4-813D-5B1193D1F265}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDA07A8C-D616-47B4-813D-5B1193D1F265}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDA07A8C-D616-47B4-813D-5B1193D1F265}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

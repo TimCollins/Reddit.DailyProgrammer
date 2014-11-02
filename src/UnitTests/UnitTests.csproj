@@ -48,6 +48,7 @@
     <Compile Include="NumbersToEnglishTests.cs" />
     <Compile Include="NumComboTests.cs" />
     <Compile Include="DuplicatesRemovalTests.cs" />
+    <Compile Include="PascalTriangleTests.cs" />
     <Compile Include="SemanticVersionSortTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -87,6 +88,10 @@
     <ProjectReference Include="..\7-Easy-Morse-Code-Translate\7-Easy-Morse-Code-Translate.csproj">
       <Project>{80b218de-af86-48c8-b585-9309bd9d010a}</Project>
       <Name>7-Easy-Morse-Code-Translate</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\8-Diff-Pascal-Triangle\8-Diff-Pascal-Triangle.csproj">
+      <Project>{dda07a8c-d616-47b4-813d-5b1193d1f265}</Project>
+      <Name>8-Diff-Pascal-Triangle</Name>
     </ProjectReference>
     <ProjectReference Include="..\8-Int-Numbers-To-English\8-Int-Numbers-To-English.csproj">
       <Project>{bffe6184-a95d-498d-be65-7c2d3422801f}</Project>

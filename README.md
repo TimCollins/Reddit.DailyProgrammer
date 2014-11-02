@@ -48,6 +48,8 @@ Challenge #8 Easy - [99 Bottles of Beer](http://www.reddit.com/r/dailyprogrammer
 
 Challenge #8 Intermediate - [Digits to English](http://www.reddit.com/r/dailyprogrammer/comments/psewf/2162012_challenge_8_intermediate/)
 
+Challenge #8 Difficult - [Pascal's Triangle](http://www.reddit.com/r/dailyprogrammer/comments/psf4n/2162012_challenge_8_difficult/)
+
 
 Challenge #183 - [Semantic Version Sort](http://www.reddit.com/r/dailyprogrammer/comments/2igfj9/10062014_challenge_183_easy_semantic_version_sort/)
 

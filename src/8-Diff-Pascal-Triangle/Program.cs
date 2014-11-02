@@ -12,6 +12,7 @@ namespace _8_Diff_Pascal_Triangle
     {
         private static void Main(string[] args)
         {
+            PascalTriangleCalculator.ShowPascal(15);
             ConsoleUtils.WaitForEscape();
         }
     }

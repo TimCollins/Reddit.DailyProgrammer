@@ -51,6 +51,7 @@
     <Compile Include="PascalTriangleTests.cs" />
     <Compile Include="SemanticVersionSortTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SortingTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\1-Int-EventMenu\1-Int-EventMenu.csproj">
@@ -96,6 +97,10 @@
     <ProjectReference Include="..\8-Int-Numbers-To-English\8-Int-Numbers-To-English.csproj">
       <Project>{bffe6184-a95d-498d-be65-7c2d3422801f}</Project>
       <Name>8-Int-Numbers-To-English</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\9-Easy-Sorting\9-Easy-Sorting.csproj">
+      <Project>{732d46d1-03f1-4c51-95ba-ab01eabb9dfd}</Project>
+      <Name>9-Easy-Sorting</Name>
     </ProjectReference>
     <ProjectReference Include="..\SemanticVersionSort\SemanticVersionSort.csproj">
       <Project>{2ec4158f-2e60-4e7b-b2a8-32130c3f09c1}</Project>

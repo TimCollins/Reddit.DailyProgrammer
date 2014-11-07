@@ -52,6 +52,7 @@ Challenge #8 Difficult - [Pascal's Triangle](http://www.reddit.com/r/dailyprogra
 
 Challenge #9 Easy - [Sorting](http://www.reddit.com/r/dailyprogrammer/comments/pu1rf/2172012_challenge_9_easy/)
 
+Challenge #9 Intermediate - [String Replacer](http://www.reddit.com/r/dailyprogrammer/comments/pu1y6/2172012_challenge_9_intermediate/)
 
 Challenge #183 - [Semantic Version Sort](http://www.reddit.com/r/dailyprogrammer/comments/2igfj9/10062014_challenge_183_easy_semantic_version_sort/)
 

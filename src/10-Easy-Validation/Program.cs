@@ -15,7 +15,7 @@ namespace _10_Easy_Validation
         static void Main(string[] args)
         {
             var validator = new PhoneNumberValidator();
-            var input = "1234567890";
+            var input = "(((123)))+(230).{1234}";
             var res = validator.Validate(input);
             Console.WriteLine("{0} returned {1}", input, res);
 

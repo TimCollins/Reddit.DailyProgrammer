@@ -33,6 +33,13 @@
                 return false;
             }
 
+            // Check the last separator
+            var lastSeparator = input.Substring(input.Length - 5, 1)[0];
+            if (lastSeparator != ' ' && lastSeparator != '.' && lastSeparator != '-')
+            {
+                return false;
+            }
+
             // 123-456-7890
             firstGroup = input.Substring(0, 3);
             secondGroup = input.Substring(4, 3);
@@ -57,6 +64,24 @@
                 }
             }
 
+            if (input[3] == '-')
+            {
+                var parts = input.Split('-');
+                if (parts[1].Length == 2)
+                {
+                    return false;
+                }
+            }
+
+            if (input[3] == '.')
+            {
+                var parts = input.Split('.');
+                if (parts[1].Length == 2)
+                {
+                    return false;
+                }
+            }
+            
             return false;
         }
     }

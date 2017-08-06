@@ -54,6 +54,8 @@ Challenge #9 Easy - [Sorting](http://www.reddit.com/r/dailyprogrammer/comments/p
 
 Challenge #9 Intermediate - [String Replacer](http://www.reddit.com/r/dailyprogrammer/comments/pu1y6/2172012_challenge_9_intermediate/)
 
+Challenge #10 Easy - [Phone Number Validation](https://www.reddit.com/r/dailyprogrammer/comments/pv98f/2182012_challenge_10_easy/)
+
 Challenge #183 - [Semantic Version Sort](http://www.reddit.com/r/dailyprogrammer/comments/2igfj9/10062014_challenge_183_easy_semantic_version_sort/)
 
 Incomplete

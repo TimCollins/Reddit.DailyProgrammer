@@ -3,6 +3,7 @@
 namespace UnitTests
 {
     [TestFixture]
+    [Ignore]
     class StringReplaceTests
     {
     }

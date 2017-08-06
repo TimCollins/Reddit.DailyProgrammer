@@ -1,15 +1,17 @@
 ﻿using NUnit.Framework;
+using _10_Easy_Validation;
 
 namespace UnitTests
 {
     [TestFixture]
-    class PhoneValidation
+    class PhoneValidationTests
     {
         [Test]
         public void AllDigitsShouldBeValid()
         {
             const string input = "1234567890";
-            var isValid = PhoneNumberValidator.Validate(input);
+            var validator = new PhoneNumberValidator();
+            var isValid = validator.Validate(input);
 
             Assert.IsTrue(isValid);
         }

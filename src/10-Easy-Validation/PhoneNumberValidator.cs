@@ -6,7 +6,14 @@ namespace _10_Easy_Validation
     {
         public bool Validate(string input)
         {
-            return true;
+            int i;
+            if (int.TryParse(input, out i))
+            {
+                // Check for all numeric
+                return true;
+            }
+
+            return false;
         }
     }
 }

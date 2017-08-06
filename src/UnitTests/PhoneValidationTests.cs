@@ -30,6 +30,26 @@ namespace UnitTests
         }
 
         [Test]
+        public void LessThan10DigitsShouldBeInvalid()
+        {
+            const string input = "1234567";
+            var validator = new PhoneNumberValidator();
+            var isValid = validator.Validate(input);
+
+            Assert.IsFalse(isValid);
+        }
+
+        [Test]
+        public void NotEnoughSeparatorsShouldBeInvalid()
+        {
+            const string input = "123-4567890";
+            var validator = new PhoneNumberValidator();
+            var isValid = validator.Validate(input);
+
+            Assert.IsFalse(isValid);
+        }
+
+        [Test]
         public void SegmentsWithDashesShouldBeValid()
         {
             const string input = "123-456-7890";

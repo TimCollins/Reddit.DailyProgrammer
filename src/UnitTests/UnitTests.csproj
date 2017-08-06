@@ -49,6 +49,7 @@
     <Compile Include="NumComboTests.cs" />
     <Compile Include="DuplicatesRemovalTests.cs" />
     <Compile Include="PascalTriangleTests.cs" />
+    <Compile Include="PhoneValidation.cs" />
     <Compile Include="SemanticVersionSortTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SortingTests.cs" />

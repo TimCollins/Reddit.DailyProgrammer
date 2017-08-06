@@ -5,9 +5,20 @@
         public bool Validate(string input)
         {
             int i;
-            if (input.Length < 10)
+            string firstGroup;
+            string secondGroup;
+            string thirdGroup;
+
+            // If there are only two groups but the second group has 4 digits then it's valid
+            if (input.Length == 8 && input[3] == '-')
             {
-                return false;
+                firstGroup = input.Substring(0, 3);
+                secondGroup = input.Substring(4, 4);
+
+                if (int.TryParse(firstGroup, out i) && int.TryParse(secondGroup, out i))
+                {
+                    return true;
+                }
             }
 
             if (int.TryParse(input, out i) && input.Length == 10)
@@ -23,9 +34,9 @@
             }
 
             // 123-456-7890
-            var firstGroup = input.Substring(0, 3);
-            var secondGroup = input.Substring(4, 3);
-            var thirdGroup = input.Substring(8, 4);
+            firstGroup = input.Substring(0, 3);
+            secondGroup = input.Substring(4, 3);
+            thirdGroup = input.Substring(8, 4);
 
             if (int.TryParse(firstGroup, out i) && int.TryParse(secondGroup, out i) &&
                 int.TryParse(thirdGroup, out i))

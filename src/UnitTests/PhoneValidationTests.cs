@@ -82,8 +82,17 @@ namespace UnitTests
         [Test]
         public void WhitespaceAfterFirstSegmentShouldBeValid()
         {
-            // (123) 456-7890
             const string input = "(123) 456.7890";
+            var validator = new PhoneNumberValidator();
+            var isValid = validator.Validate(input);
+
+            Assert.IsTrue(isValid);
+        }
+
+        [Test]
+        public void FirstSegmentShouldBeOptional()
+        {
+            const string input = "456-7890";
             var validator = new PhoneNumberValidator();
             var isValid = validator.Validate(input);
 

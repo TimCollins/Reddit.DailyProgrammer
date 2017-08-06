@@ -58,5 +58,36 @@ namespace UnitTests
 
             Assert.IsTrue(isValid);
         }
+
+        [Test]
+        public void SegmentsWithDotsShouldBeValid()
+        {
+            const string input = "123.456.7890";
+            var validator = new PhoneNumberValidator();
+            var isValid = validator.Validate(input);
+
+            Assert.IsTrue(isValid);
+        }
+
+        [Test]
+        public void BracketsAroundFirstSegmentShouldBeValid()
+        {
+            const string input = "(123)456.7890";
+            var validator = new PhoneNumberValidator();
+            var isValid = validator.Validate(input);
+
+            Assert.IsTrue(isValid);
+        }
+
+        [Test]
+        public void WhitespaceAfterFirstSegmentShouldBeValid()
+        {
+            // (123) 456-7890
+            const string input = "(123) 456.7890";
+            var validator = new PhoneNumberValidator();
+            var isValid = validator.Validate(input);
+
+            Assert.IsTrue(isValid);
+        }
     }
 }

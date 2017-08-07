@@ -55,6 +55,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SortingTests.cs" />
     <Compile Include="StringReplaceTests.cs" />
+    <Compile Include="TysonPairTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\1-Int-EventMenu\1-Int-EventMenu.csproj">

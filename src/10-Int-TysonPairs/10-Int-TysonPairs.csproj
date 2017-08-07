@@ -51,6 +51,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\8-Int-Numbers-To-English\8-Int-Numbers-To-English.csproj">
+      <Project>{bffe6184-a95d-498d-be65-7c2d3422801f}</Project>
+      <Name>8-Int-Numbers-To-English</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Util\Util.csproj">
       <Project>{F90B35C6-C3DB-4506-B6D9-30E2C5876199}</Project>
       <Name>Util</Name>

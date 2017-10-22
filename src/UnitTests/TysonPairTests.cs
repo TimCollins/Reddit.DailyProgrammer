@@ -7,10 +7,10 @@ namespace UnitTests
     class TysonPairTests
     {
         [Test]
-        public void TwelvePlusOneShouldSucceed()
+        public void TwelvePlusOneShouldMatch()
         {
-            var first = 12;
-            var second = 1;
+            var first = "12 + 1";
+            var second = "11 + 2";
 
             Assert.IsTrue(new TysonPairChecker().IsPair(first, second));
         }

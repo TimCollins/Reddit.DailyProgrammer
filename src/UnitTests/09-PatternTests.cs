@@ -39,7 +39,7 @@ namespace UnitTests
         }
 
         [Test]
-        public void Test8Is1113213211()
+        public void EighthIterationIs1113213211()
         {
             var result = PatternGenerator.Calculate(8);
 

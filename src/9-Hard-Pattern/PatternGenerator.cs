@@ -9,45 +9,59 @@ namespace _9_Hard_Pattern
     {
         public static string Calculate(int iterations)
         {
+            // Just return straight away if only one iteration has been specified
             if (iterations == 1)
             {
                 return "1";
             }
 
-            var data = "1";
-            var output = new StringBuilder();
-            iterations--;
-
-            for (var i = 0; i < iterations; i++)
+            var output = "1";
+            var tmpStorage = new StringBuilder();
+            
+            for (var i = 1; i < iterations; i++)
             {
+                // There will always be at least one character to iterate over
+                // As a result that character will always have occurred once
                 var cnt = 1;
                 var charCount = 1;
-                var currentChar = data[0];
+                var currentChar = output[0];
 
-                while (cnt < data.Length)
+                // Loop through the data string
+                while (cnt < output.Length)
                 {
-                    if (currentChar == data[cnt])
+                    // If the current character matches the next one in the string 
+                    // then increment the counter
+                    if (currentChar == output[cnt])
                     {
                         charCount++;
                     }
                     else
                     {
-                        output.Append(charCount);
-                        output.Append(currentChar);
+                        // Otherwise add the number of occurences of the current character
+                        // and the current character itself to tmpStorage
+                        tmpStorage.Append(charCount);
+                        tmpStorage.Append(currentChar);
+                        // Reset the character count
                         charCount = 1;
-                        currentChar = data[cnt];
+                        // And get the next character in the array
+                        currentChar = output[cnt];
                     }
+                    // Increment the loop counter
                     cnt++;
                 }
 
-                output.Append(charCount);
-                output.Append(currentChar);
+                // Having gone through the string, add the number of occurences of the 
+                // current character and the current character itself to tmpStorage
+                tmpStorage.Append(charCount);
+                tmpStorage.Append(currentChar);
 
-                data = output.ToString();
-                output = new StringBuilder();
+                // Save the current state of the output string and clear it, ready to start again
+                // on another iteration
+                output = tmpStorage.ToString();
+                tmpStorage = new StringBuilder();
             }
 
-            return data;
+            return output;
         }
     }
 }

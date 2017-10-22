@@ -5,6 +5,8 @@ A repository containing my attempts at working through the Reddit [DailyProgramm
 
 All solutions are in C# (.NET Framework 4.5) and are implemented as standalone Console applications except where noted.
 
+[This](https://www.reddit.com/r/dailyprogrammer/wiki/challenges) page features a more accessible list of the challenges.
+
 Complete
 --
 Challenge #1 Easy - [Greeting](http://www.reddit.com/r/dailyprogrammer/comments/pih8x/easy_challenge_1/)
@@ -53,6 +55,8 @@ Challenge #8 Difficult - [Pascal's Triangle](http://www.reddit.com/r/dailyprogra
 Challenge #9 Easy - [Sorting](http://www.reddit.com/r/dailyprogrammer/comments/pu1rf/2172012_challenge_9_easy/)
 
 Challenge #9 Intermediate - [String Replacer](http://www.reddit.com/r/dailyprogrammer/comments/pu1y6/2172012_challenge_9_intermediate/)
+
+Challenge #9 Hard - [Pattern Generator](https://www.reddit.com/r/dailyprogrammer/comments/pu2c0/2172012_challenge_9_difficult/)
 
 Challenge #10 Easy - [Phone Number Validation](https://www.reddit.com/r/dailyprogrammer/comments/pv98f/2182012_challenge_10_easy/)
 

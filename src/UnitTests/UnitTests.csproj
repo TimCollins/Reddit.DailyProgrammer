@@ -39,6 +39,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="09-PatternTests.cs" />
     <Compile Include="AlphabeticalCipherTests.cs" />
     <Compile Include="CipherTests.cs" />
     <Compile Include="DateCalculatorTests.cs" />
@@ -108,6 +109,10 @@
     <ProjectReference Include="..\9-Easy-Sorting\9-Easy-Sorting.csproj">
       <Project>{732d46d1-03f1-4c51-95ba-ab01eabb9dfd}</Project>
       <Name>9-Easy-Sorting</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\9-Hard-Pattern\9-Hard-Pattern.csproj">
+      <Project>{304d0769-8342-4db9-b337-60d76d2a598d}</Project>
+      <Name>9-Hard-Pattern</Name>
     </ProjectReference>
     <ProjectReference Include="..\SemanticVersionSort\SemanticVersionSort.csproj">
       <Project>{2ec4158f-2e60-4e7b-b2a8-32130c3f09c1}</Project>

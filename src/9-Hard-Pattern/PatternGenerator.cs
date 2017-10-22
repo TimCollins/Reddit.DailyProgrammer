@@ -7,33 +7,47 @@ namespace _9_Hard_Pattern
     /// </summary>
     public static class PatternGenerator
     {
-        public static string Calculate(string s)
+        public static string Calculate(int iterations)
         {
-            var output = new StringBuilder();
-            var cnt = 1;
-            var charCount = 1;
-            var currentChar = s[0];
-
-            while (cnt < s.Length)
+            if (iterations == 1)
             {
-                if (currentChar == s[cnt])
-                {
-                    charCount++;
-                }
-                else
-                {
-                    output.Append(charCount);
-                    output.Append(currentChar);
-                    charCount = 1;
-                    currentChar = s[cnt];
-                }
-                cnt++;
+                return "1";
             }
 
-            output.Append(charCount);
-            output.Append(currentChar);
+            var data = "1";
+            var output = new StringBuilder();
+            iterations--;
 
-            return output.ToString();
+            for (var i = 0; i < iterations; i++)
+            {
+                var cnt = 1;
+                var charCount = 1;
+                var currentChar = data[0];
+
+                while (cnt < data.Length)
+                {
+                    if (currentChar == data[cnt])
+                    {
+                        charCount++;
+                    }
+                    else
+                    {
+                        output.Append(charCount);
+                        output.Append(currentChar);
+                        charCount = 1;
+                        currentChar = data[cnt];
+                    }
+                    cnt++;
+                }
+
+                output.Append(charCount);
+                output.Append(currentChar);
+
+                data = output.ToString();
+                output = new StringBuilder();
+            }
+
+            return data;
         }
     }
 }

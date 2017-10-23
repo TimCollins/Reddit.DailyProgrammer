@@ -47,6 +47,13 @@ namespace UnitTests
         }
 
         [Test]
+        public void CanReturnFifty()
+        {
+            var output = NumberConverter.Convert(50);
+            Assert.AreEqual("fifty", output);
+        }
+
+        [Test]
         public void CanReturnSixtySix()
         {
             string output = NumberConverter.Convert(66);

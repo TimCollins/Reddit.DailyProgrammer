@@ -19,7 +19,10 @@ namespace _8_Int_Numbers_To_English
                 CalculateTensAndOnes(number, out tens, out ones);
 
                 output.Append(GetTensValue(tens));
-                output.Append(" " + GetOnesValue(ones));
+                if (ones > 0)
+                {
+                    output.Append(" " + GetOnesValue(ones));
+                }
             }
             else if (number < 1000)
             {

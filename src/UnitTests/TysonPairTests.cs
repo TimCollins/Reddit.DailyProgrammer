@@ -23,5 +23,14 @@ namespace UnitTests
 
             Assert.IsTrue(new TysonPairChecker().IsPair(first, second));
         }
+
+        [Test]
+        public void FourPlusTwentySevenShouldMatch()
+        {
+            var first = "4 + 27 ";
+            var second = "7 + 24";
+
+            Assert.IsTrue(new TysonPairChecker().IsPair(first, second));
+        }
     }
 }

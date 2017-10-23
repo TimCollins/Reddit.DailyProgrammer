@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using _8_Int_Numbers_To_English;
 
 namespace _10_Int_TysonPairs
 {
@@ -33,7 +34,25 @@ namespace _10_Int_TysonPairs
                 return false;
             }
 
-            return true;
+            var firstChars = string.Join("", GetWords(firstNumbers)).ToCharArray();
+            Array.Sort(firstChars);
+
+            var secondChars = string.Join(string.Empty, GetWords(secondNumbers)).ToCharArray();
+            Array.Sort(secondChars);
+
+            return firstChars.ToString() == secondChars.ToString();
+        }
+
+        private string[] GetWords(int[] firstNumbers)
+        {
+            var numbers = new List<string>();
+
+            foreach (var number in firstNumbers)
+            {
+                numbers.Add(NumberConverter.Convert(number));
+            }
+
+            return numbers.ToArray();
         }
 
         private int Sum(int[] numbers)

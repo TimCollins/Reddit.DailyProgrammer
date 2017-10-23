@@ -60,6 +60,8 @@ Challenge #9 Hard - [Pattern Generator](https://www.reddit.com/r/dailyprogrammer
 
 Challenge #10 Easy - [Phone Number Validation](https://www.reddit.com/r/dailyprogrammer/comments/pv98f/2182012_challenge_10_easy/)
 
+Challenge #10 Intermediate - [Tyson Pair Checker](https://www.reddit.com/r/dailyprogrammer/comments/pv8zm/2182012_challenge_10_intermediate/
+
 Challenge #183 - [Semantic Version Sort](http://www.reddit.com/r/dailyprogrammer/comments/2igfj9/10062014_challenge_183_easy_semantic_version_sort/)
 
 Incomplete

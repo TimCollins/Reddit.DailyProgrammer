@@ -40,7 +40,7 @@ namespace _10_Int_TysonPairs
             var secondChars = string.Join(string.Empty, GetWords(secondNumbers)).ToCharArray();
             Array.Sort(secondChars);
 
-            return firstChars.ToString() == secondChars.ToString();
+            return new string(firstChars) == new string(secondChars);
         }
 
         private string[] GetWords(int[] firstNumbers)

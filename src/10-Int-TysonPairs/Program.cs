@@ -1,4 +1,5 @@
-﻿using Util;
+﻿using System;
+using Util;
 
 namespace _10_Int_TysonPairs
 {
@@ -14,6 +15,27 @@ namespace _10_Int_TysonPairs
         static void Main(string[] args)
         {
             var checker = new TysonPairChecker();
+            const int max = 10;
+
+            for (var first = 0; first < max; first++)
+            {
+                for (var second = 0; second < max; second++)
+                {
+                    for (var third = 0; third < max; third++)
+                    {
+                        for (var fourth = 0; fourth < max; fourth++)
+                        {
+                            var firstStr = string.Format("{0} + {1}", first, second);
+                            var secondStr = string.Format("{0} + {1}", third, fourth);
+
+                            if (checker.IsPair(firstStr, secondStr))
+                            {
+                                Console.WriteLine("{0} equals {1}", firstStr, secondStr);
+                            }
+                        }
+                    }
+                }
+            }
 
             ConsoleUtils.WaitForEscape();
         }

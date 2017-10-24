@@ -61,6 +61,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10-Easy-Validation", "10-Ea
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10-Int-TysonPairs", "10-Int-TysonPairs\10-Int-TysonPairs.csproj", "{3A3377B2-9B69-4CF4-84A7-81EAF792159C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11-Easy-DayOfWeek", "11-Easy-DayOfWeek\11-Easy-DayOfWeek.csproj", "{B8417E60-AF69-4E44-BA17-2F143AF456F0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -183,6 +185,10 @@ Global
 		{3A3377B2-9B69-4CF4-84A7-81EAF792159C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3A3377B2-9B69-4CF4-84A7-81EAF792159C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3A3377B2-9B69-4CF4-84A7-81EAF792159C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8417E60-AF69-4E44-BA17-2F143AF456F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8417E60-AF69-4E44-BA17-2F143AF456F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8417E60-AF69-4E44-BA17-2F143AF456F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8417E60-AF69-4E44-BA17-2F143AF456F0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

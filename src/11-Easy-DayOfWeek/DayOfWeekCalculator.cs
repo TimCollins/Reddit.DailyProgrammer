@@ -25,6 +25,17 @@
                 return false;
             }
 
+            int month;
+            if (!int.TryParse(args[1], out month))
+            {
+                return false;
+            }
+
+            if (month < 0 || month > 11)
+            {
+                return false;
+            }
+
             return true;
         }
     }

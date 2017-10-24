@@ -43,7 +43,7 @@ namespace UnitTests
         [Test]
         public void DayMustBeNumeric()
         {
-            var args = new[] { "a", "b", "c" };
+            var args = new[] { "a", "5", "1997" };
 
             Assert.IsFalse(_calculator.IsValidCommandLine(args));
         }
@@ -60,6 +60,30 @@ namespace UnitTests
         public void DayGreaterThanSixShouldFail()
         {
             var args = new[] { "17", "5", "1997" };
+
+            Assert.IsFalse(_calculator.IsValidCommandLine(args));
+        }
+
+        [Test]
+        public void MonthMustBeNumeric()
+        {
+            var args = new[] { "5", "b", "1997" };
+
+            Assert.IsFalse(_calculator.IsValidCommandLine(args));
+        }
+
+        [Test]
+        public void MonthLessThanZeroWillFail()
+        {
+            var args = new[] { "2", "-5", "1997" };
+
+            Assert.IsFalse(_calculator.IsValidCommandLine(args));
+        }
+
+        [Test]
+        public void MonthGreaterThanElevenShouldFail()
+        {
+            var args = new[] { "1", "15", "1997" };
 
             Assert.IsFalse(_calculator.IsValidCommandLine(args));
         }

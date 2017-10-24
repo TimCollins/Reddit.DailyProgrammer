@@ -36,6 +36,17 @@
                 return false;
             }
 
+            int year;
+            if (!int.TryParse(args[2], out year))
+            {
+                return false;
+            }
+
+            if (year < 1970 || year > 2038)
+            {
+                return false;
+            }
+
             return true;
         }
     }

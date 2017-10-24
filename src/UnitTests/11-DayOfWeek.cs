@@ -35,7 +35,7 @@ namespace UnitTests
         [Test]
         public void ExactlyThreeArgsWillPass()
         {
-            var args = new[] { "1", "2", "3" };
+            var args = new[] { "1", "2", "1971" };
 
             Assert.IsTrue(_calculator.IsValidCommandLine(args));
         }
@@ -88,5 +88,28 @@ namespace UnitTests
             Assert.IsFalse(_calculator.IsValidCommandLine(args));
         }
 
+        [Test]
+        public void YearMustBeNumeric()
+        {
+            var args = new[] { "5", "11", "c" };
+
+            Assert.IsFalse(_calculator.IsValidCommandLine(args));
+        }
+
+        [Test]
+        public void YearLessThan1970WillFail()
+        {
+            var args = new[] { "2", "5", "1969" };
+
+            Assert.IsFalse(_calculator.IsValidCommandLine(args));
+        }
+
+        [Test]
+        public void YearGreaterThan2038ShouldFail()
+        {
+            var args = new[] { "1", "15", "2152" };
+
+            Assert.IsFalse(_calculator.IsValidCommandLine(args));
+        }
     }
 }

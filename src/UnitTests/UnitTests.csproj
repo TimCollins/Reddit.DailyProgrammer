@@ -72,6 +72,10 @@
       <Project>{3a3377b2-9b69-4cf4-84a7-81eaf792159c}</Project>
       <Name>10-Int-TysonPairs</Name>
     </ProjectReference>
+    <ProjectReference Include="..\11-Easy-DayOfWeek\11-Easy-DayOfWeek.csproj">
+      <Project>{b8417e60-af69-4e44-ba17-2f143af456f0}</Project>
+      <Name>11-Easy-DayOfWeek</Name>
+    </ProjectReference>
     <ProjectReference Include="..\2-Easy-Calculator\2-Easy-Calculator.csproj">
       <Project>{9119a8c3-14e7-4036-b3fb-723d561422f2}</Project>
       <Name>2-Easy-Calculator</Name>

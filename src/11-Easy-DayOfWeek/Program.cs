@@ -12,7 +12,9 @@ namespace _11_Easy_DayOfWeek
     {
         static void Main(string[] args)
         {
-            if (!IsValidCommandLine(args))
+            var calculator = new DayOfWeekCalculator();
+
+            if (!calculator.IsValidCommandLine(args))
             {
                 return;
             }
@@ -30,11 +32,6 @@ namespace _11_Easy_DayOfWeek
         private static int Parse(string arg)
         {
             return 1;
-        }
-
-        private static bool IsValidCommandLine(string[] args)
-        {
-            return args.Length == 3;
         }
     }
 }

@@ -6,5 +6,10 @@
         {
             return "Monday";
         }
+
+        public bool IsValidCommandLine(string[] args)
+        {
+            return args.Length == 3;
+        }
     }
 }

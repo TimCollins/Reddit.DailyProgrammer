@@ -35,12 +35,34 @@ namespace UnitTests
         [Test]
         public void ExactlyThreeArgsWillPass()
         {
-            var args = new[] { "first", "second", "third" };
+            var args = new[] { "1", "2", "3" };
 
             Assert.IsTrue(_calculator.IsValidCommandLine(args));
         }
 
+        [Test]
+        public void DayMustBeNumeric()
+        {
+            var args = new[] { "a", "b", "c" };
 
+            Assert.IsFalse(_calculator.IsValidCommandLine(args));
+        }
+
+        [Test]
+        public void DayLessThanZeroWillFail()
+        {
+            var args = new[] { "-2", "5", "1997" };
+
+            Assert.IsFalse(_calculator.IsValidCommandLine(args));
+        }
+
+        [Test]
+        public void DayGreaterThanSixShouldFail()
+        {
+            var args = new[] { "17", "5", "1997" };
+
+            Assert.IsFalse(_calculator.IsValidCommandLine(args));
+        }
 
     }
 }

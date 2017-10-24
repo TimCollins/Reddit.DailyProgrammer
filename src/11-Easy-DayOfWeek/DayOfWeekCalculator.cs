@@ -9,7 +9,23 @@
 
         public bool IsValidCommandLine(string[] args)
         {
-            return args.Length == 3;
+            if (args.Length != 3)
+            {
+                return false;
+            }
+
+            int day;
+            if (!int.TryParse(args[0], out day))
+            {
+                return false;
+            }
+
+            if (day < 0 || day > 6)
+            {
+                return false;
+            }
+
+            return true;
         }
     }
 }

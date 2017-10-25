@@ -35,15 +35,15 @@ namespace UnitTests
         [Test]
         public void ExactlyThreeArgsWillPass()
         {
-            var args = new[] { "1", "2", "1971" };
+            var args = new[] { "-d1", "-m2", "-y1997" };
 
             Assert.IsTrue(_calculator.IsValidCommandLine(args));
         }
 
         [Test]
-        public void DayMustBeNumeric()
+        public void DayMustBeInCorrectFormat()
         {
-            var args = new[] { "a", "5", "1997" };
+            var args = new[] { "4", "-m5", "-y1997" };
 
             Assert.IsFalse(_calculator.IsValidCommandLine(args));
         }

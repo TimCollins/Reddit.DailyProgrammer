@@ -40,7 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="09-PatternTests.cs" />
-    <Compile Include="11-DayOfWeek.cs" />
+    <Compile Include="11-DayOfWeekTests.cs" />
     <Compile Include="AlphabeticalCipherTests.cs" />
     <Compile Include="CipherTests.cs" />
     <Compile Include="DateCalculatorTests.cs" />

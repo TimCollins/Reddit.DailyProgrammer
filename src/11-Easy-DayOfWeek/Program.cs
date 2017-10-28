@@ -19,19 +19,16 @@ namespace _11_Easy_DayOfWeek
                 return;
             }
 
-            var day = Parse(args[0]);
-            var month = Parse(args[1]);
-            var year = Parse(args[2]);
+            int day, month, year;
+
+            calculator.ParseArg(args[0], out day);
+            calculator.ParseArg(args[1], out month);
+            calculator.ParseArg(args[2], out year);
 
             var dayStr = new DayOfWeekCalculator().GetDayOfWeek(day, month, year);
             Console.WriteLine("{0}/{1}/{2} is a {3}", day, month, year, dayStr);
         
             ConsoleUtils.WaitForEscape();
-        }
-
-        private static int Parse(string arg)
-        {
-            return 1;
         }
     }
 }

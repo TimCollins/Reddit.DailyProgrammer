@@ -13,7 +13,7 @@ namespace UnitTests
         {
             _calculator = new DayOfWeekCalculator();
         }
-        // Test the first arg to be from 0 - 6 inclusive
+        // Test the first arg to be from 1 - 31 inclusive
         // The the second to be from 0 - 11 inclusive
         // The third to be from 1970 - 2038 inclusive
         [Test]
@@ -57,9 +57,9 @@ namespace UnitTests
         }
 
         [Test]
-        public void DayGreaterThanSixShouldFail()
+        public void DayGreaterThan31ShouldFail()
         {
-            var args = new[] { "17", "5", "1997" };
+            var args = new[] { "32", "5", "1997" };
 
             Assert.IsFalse(_calculator.IsValidCommandLine(args));
         }

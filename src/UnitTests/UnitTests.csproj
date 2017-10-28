@@ -56,7 +56,6 @@
     <Compile Include="SemanticVersionSortTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SortingTests.cs" />
-    <Compile Include="StringReplaceTests.cs" />
     <Compile Include="TysonPairTests.cs" />
   </ItemGroup>
   <ItemGroup>

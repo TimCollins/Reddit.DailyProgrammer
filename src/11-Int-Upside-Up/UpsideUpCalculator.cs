@@ -36,6 +36,7 @@ namespace _11_Int_Upside_Up
             // Reversed: 1691
             // Switch 6s and 9s: 1961
             // Check equality with input
+            // Note that this won't work for single digits.
             for (var i = 0; i < reversed.Length; i++)
             {
                 var digit = reversed[i];
@@ -52,6 +53,19 @@ namespace _11_Int_Upside_Up
                 else if (digit == '9')
                 {
                     reversed[i] = '6';
+                }
+            }
+
+            if (digits.Length == 1)
+            {
+                if (digits[0] == '6')
+                {
+                    return reversed[0] == '9';
+                }
+
+                if (digits[0] == '9')
+                {
+                    return reversed[0] == '6';
                 }
             }
 

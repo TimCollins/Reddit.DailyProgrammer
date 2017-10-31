@@ -17,17 +17,31 @@ namespace UnitTests
         [Test]
         public void SupportedSingleDigitsShouldSucceed()
         {
-            const int input = 1;
+            int[] input = { 1, 6, 8, 9, 0 };
 
-            Assert.IsTrue(_calculator.IsUpsideUp(input));
+            foreach (var i in input)
+            {
+                Assert.IsTrue(_calculator.IsUpsideUp(i));
+            }
         }
 
         [Test]
         public void UnsupportedSingleDigitsShouldFail()
         {
-            const int input = 7;
+            int[] input = { 2, 3, 4, 5, 7 };
 
-            Assert.IsFalse(_calculator.IsUpsideUp(input));
+            foreach (var i in input)
+            {
+                Assert.IsFalse(_calculator.IsUpsideUp(i));
+            }
+        }
+
+        [Test]
+        public void DoubleDigitTest()
+        {
+            var input = 11;
+
+            Assert.IsTrue(_calculator.IsUpsideUp(input));
         }
 
         [Test]

@@ -7,10 +7,10 @@ namespace _11_Int_Upside_Up
     {
         static void Main(string[] args)
         {
-            int input = 1961;
             var calculator = new UpsideUpCalculator();
-            //Console.WriteLine(input + " is " + calculator.IsUpsideUp(input));
-            var next = calculator.GetNextAfter(1961);
+            const int input = 1961;
+            var next = calculator.GetNextAfter(input);
+
             Console.WriteLine("The next upside up number after 1961 is " + next);
             ConsoleUtils.WaitForEscape();
         }

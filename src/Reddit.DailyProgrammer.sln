@@ -65,6 +65,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11-Easy-DayOfWeek", "11-Eas
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "9-Hard-Pattern", "9-Hard-Pattern\9-Hard-Pattern.csproj", "{304D0769-8342-4DB9-B337-60D76D2A598D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11-Int-Upside-Up", "11-Int-Upside-Up\11-Int-Upside-Up.csproj", "{BA7C9840-BA76-402C-893F-78EFE41054B7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -195,6 +197,10 @@ Global
 		{304D0769-8342-4DB9-B337-60D76D2A598D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{304D0769-8342-4DB9-B337-60D76D2A598D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{304D0769-8342-4DB9-B337-60D76D2A598D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA7C9840-BA76-402C-893F-78EFE41054B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA7C9840-BA76-402C-893F-78EFE41054B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA7C9840-BA76-402C-893F-78EFE41054B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA7C9840-BA76-402C-893F-78EFE41054B7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

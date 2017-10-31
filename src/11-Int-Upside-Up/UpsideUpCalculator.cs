@@ -1,13 +1,23 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
 
 namespace _11_Int_Upside_Up
 {
     public class UpsideUpCalculator
     {
-        public int GetNextAfter(int start)
+        public int GetNextAfter(int number)
         {
-            return 1;
+            var found = false;
+
+            while (!found)
+            {
+                number++;
+                if (IsUpsideUp(number))
+                {
+                    found = true;
+                }
+            }
+
+            return number;
         }
 
         public int GetTotal(int max)

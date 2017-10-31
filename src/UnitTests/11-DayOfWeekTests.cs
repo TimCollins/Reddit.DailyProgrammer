@@ -175,5 +175,29 @@ namespace UnitTests
 
             Assert.AreEqual(dayOfWeek, "Saturday");
         }
+
+        [Test]
+        public void SundayTest()
+        {
+            var dayOfWeek = _calculator.GetDayOfWeek(29, 10, 2017);
+
+            Assert.AreEqual(dayOfWeek, "Sunday");
+        }
+
+        [Test]
+        public void SundayTest2()
+        {
+            var dayOfWeek = _calculator.GetDayOfWeek(25, 12, 2016);
+
+            Assert.AreEqual(dayOfWeek, "Sunday");
+        }
+
+        [Test]
+        public void LeapYearTest()
+        {
+            var dayOfWeek = _calculator.GetDayOfWeek(14, 2, 2016);
+
+            Assert.AreEqual(dayOfWeek, "Sunday");
+        }
     }
 }

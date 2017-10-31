@@ -57,7 +57,7 @@ namespace _11_Easy_DayOfWeek
             // Add key value for month (each of these could be an individual test)
             withMonth += GetMonthValue(month);
             // If this is January or Feb of a leap year then subtract 1 (also a possible test)
-            if (IsLeapYear(year))
+            if (IsLeapYear(year) && (month == 1 || month == 2))
             {
                 withMonth--;
             }
@@ -110,6 +110,16 @@ namespace _11_Easy_DayOfWeek
 
         private bool IsLeapYear(int year)
         {
+            // See https://en.wikipedia.org/wiki/Leap_year#Algorithm
+
+            if (year % 4 != 0)
+            {
+                return false;
+            }
+            else if (year % 100 != 0)
+            {
+                return true;
+            }
             if (year % 4 == 0 && year % 400 == 0)
             {
                 return true;
@@ -135,32 +145,32 @@ namespace _11_Easy_DayOfWeek
         /// </summary>
         private int GetMonthValue(int month)
         {
-            if (month == 3 || month == 6)
+            if (month == 4 || month == 7)
             {
                 return 0;
             }
 
-            if (month == 0 || month == 9)
+            if (month == 1 || month == 10)
             {
                 return 1;
             }
 
-            if (month == 4)
+            if (month == 5)
             {
                 return 2;
             }
 
-            if (month == 7)
+            if (month == 8)
             {
                 return 3;
             }
 
-            if (month == 1 || month == 2 || month == 10)
+            if (month == 2 || month == 3 || month == 11)
             {
                 return 4;
             }
 
-            if (month == 5)
+            if (month == 6)
             {
                 return 5;
             }
@@ -215,7 +225,7 @@ namespace _11_Easy_DayOfWeek
         }
 
         /// <summary>
-        /// The command line arguments are to be in the form -tn
+        /// The command line arguments are to be in the form "-tn"
         /// Where t is "d", "m" or "y" and n is a number
         /// </summary>
         public bool ParseArg(string s, out int i)

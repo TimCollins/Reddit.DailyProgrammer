@@ -22,7 +22,17 @@ namespace _11_Int_Upside_Up
 
         public int GetTotal(int max)
         {
-            return 1;
+            var count = 0;
+
+            for (var i = 0; i < max; i++)
+            {
+                if (IsUpsideUp(i))
+                {
+                    count++;
+                }
+            }
+
+            return count;
         }
 
         public bool IsUpsideUp(int input)

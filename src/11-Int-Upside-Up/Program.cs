@@ -12,6 +12,11 @@ namespace _11_Int_Upside_Up
             var next = calculator.GetNextAfter(input);
 
             Console.WriteLine("The next upside up number after 1961 is " + next);
+
+            var max = 10000;
+            var total = calculator.GetTotal(max);
+            Console.WriteLine("There are {0} upside up numbers from 0 - 10000", total);
+
             ConsoleUtils.WaitForEscape();
         }
     }

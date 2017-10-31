@@ -151,5 +151,29 @@ namespace UnitTests
 
             Assert.IsFalse(_calculator.IsValidCommandLine(args));
         }
+
+        [Test]
+        public void FutureDateTest()
+        {
+            var dayOfWeek = _calculator.GetDayOfWeek(16, 12, 2482);
+
+            Assert.AreEqual(dayOfWeek, "Wednesday");
+        }
+
+        [Test]
+        public void PastDateTest()
+        {
+            var dayOfWeek = _calculator.GetDayOfWeek(2, 2, 1995);
+
+            Assert.AreEqual(dayOfWeek, "Thursday");
+        }
+
+        [Test]
+        public void RecentPastTest()
+        {
+            var dayOfWeek = _calculator.GetDayOfWeek(28, 10, 2017);
+
+            Assert.AreEqual(dayOfWeek, "Saturday");
+        }
     }
 }

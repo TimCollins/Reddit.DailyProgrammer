@@ -8,9 +8,8 @@ namespace _11_Easy_DayOfWeek
         {
             // See here from some implementation algorithms:
             // https://en.wikipedia.org/wiki/Determination_of_the_day_of_the_week
-            //int dayOfWeek = GetKeyValueResult(day, month, year);
+            var dayOfWeek = GetKeyValueResult(day, month, year);
 
-            int dayOfWeek = GetKeyValueResult(16, 12, 2482);
             if (dayOfWeek == 0)
             {
                 return "Saturday";
@@ -49,10 +48,6 @@ namespace _11_Easy_DayOfWeek
         /// </summary>
         private int GetKeyValueResult(int day, int month, int year)
         {
-            // -d2 -m2 -y1995 should return Thursday
-            // -d16 -m12 -y2482 should return Wednesday
-            // -d28 -m10 -y2017 should return Saturday
-
             // Take last 2 digits of year
             var last2Digits = year % 100;
             // Divide by 4, dropping any remainder

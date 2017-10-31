@@ -7,9 +7,9 @@
             return 1;
         }
 
-        public int[] GetList(int max)
+        public int GetTotal(int max)
         {
-            return new int[0];
+            return 1;
         }
     }
 }

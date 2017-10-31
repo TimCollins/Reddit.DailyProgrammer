@@ -25,21 +25,37 @@ namespace _11_Int_Upside_Up
             // 8 => 8
             // 9 => 6
             // 0 => 0
+            // Note that 6 and 9 don't produce the same result as 1, 8, 0 
+            // so they need to be handled differently
 
             var digits = input.ToString().ToCharArray();
             var reversed = digits.Reverse().ToArray();
 
-            for (int i = 0; i < digits.Length; i++)
+            // Switch 6 and 9 in the reversed array
+            // Input: 1961
+            // Reversed: 1691
+            // Switch 6s and 9s: 1961
+            // Check equality with input
+            for (var i = 0; i < reversed.Length; i++)
             {
-                var digit = digits[i];
+                var digit = reversed[i];
 
                 if (!CanFlip(digit))
                 {
                     return false;
                 }
+
+                if (digit == '6')
+                {
+                    reversed[i] = '9';
+                }
+                else if (digit == '9')
+                {
+                    reversed[i] = '6';
+                }
             }
 
-            return true;
+            return new string(digits) == new string(reversed);
         }
 
         private bool CanFlip(char digit)

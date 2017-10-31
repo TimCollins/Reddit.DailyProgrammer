@@ -41,6 +41,38 @@ namespace UnitTests
         }
 
         [Test]
+        public void InvalidDayParamWillFail()
+        {
+            var args = new[] { "1", "-m2", "-y1998" };
+
+            Assert.IsFalse(_calculator.IsValidCommandLine(args));
+        }
+
+        [Test]
+        public void InvalidMonthParamWillFail()
+        {
+            var args = new[] { "-d1", "2", "-y1998" };
+
+            Assert.IsFalse(_calculator.IsValidCommandLine(args));
+        }
+
+        [Test]
+        public void InvalidYearParamWillFail()
+        {
+            var args = new[] { "-d1", "-m2", "1999" };
+
+            Assert.IsFalse(_calculator.IsValidCommandLine(args));
+        }
+
+        [Test]
+        public void UnsupportedSwitchWillFail()
+        {
+            var args = new[] { "-z1", "-m2", "1999" };
+
+            Assert.IsFalse(_calculator.IsValidCommandLine(args));
+        }
+
+        [Test]
         public void DayMustBeInCorrectFormat()
         {
             var args = new[] { "4", "-m5", "-y1997" };
@@ -59,9 +91,17 @@ namespace UnitTests
         [Test]
         public void DayGreaterThan31ShouldFail()
         {
-            var args = new[] { "32", "5", "1997" };
+            var args = new[] { "-d32", "5", "1997" };
 
             Assert.IsFalse(_calculator.IsValidCommandLine(args));
+        }
+
+        [Test]
+        public void MultiDigitDayShouldPass()
+        {
+            var args = new[] { "-d28", "-m5", "-y1997" };
+
+            Assert.IsTrue(_calculator.IsValidCommandLine(args));
         }
 
         [Test]

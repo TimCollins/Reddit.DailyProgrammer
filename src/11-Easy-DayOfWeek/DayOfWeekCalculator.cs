@@ -186,7 +186,10 @@ namespace _11_Easy_DayOfWeek
                 return false;
             }
 
-            if (day < 0 || day > 6)
+            // This is wrong
+            // For now do 1 - 31 inclusive
+            // and work on a better test related to the specified month
+            if (day < 1 || day > 31)
             {
                 return false;
             }
@@ -239,7 +242,7 @@ namespace _11_Easy_DayOfWeek
 
             return t == "y"
                 ? int.TryParse(s.Substring(2, 4), out i)
-                : int.TryParse(s.Substring(2, 1), out i);
+                : int.TryParse(s.Substring(2), out i);
         }
     }
 }

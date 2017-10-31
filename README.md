@@ -64,6 +64,8 @@ Challenge #10 Intermediate - [Tyson Pair Checker](https://www.reddit.com/r/daily
 
 Challenge #11 Easy - [Day of the Week Calculator](https://www.reddit.com/r/dailyprogrammer/comments/pwons/2192012_challenge_11_easy/)
 
+Challenge #11 Intermediate - [Upside Up Numbers](https://www.reddit.com/r/dailyprogrammer/comments/pwox3/2192012_challenge_11_intermediate/)
+
 Challenge #183 - [Semantic Version Sort](http://www.reddit.com/r/dailyprogrammer/comments/2igfj9/10062014_challenge_183_easy_semantic_version_sort/)
 
 Incomplete

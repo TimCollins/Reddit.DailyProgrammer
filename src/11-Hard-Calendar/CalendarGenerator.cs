@@ -1,4 +1,6 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
+using System.Text;
 
 namespace _11_Hard_Calendar
 {
@@ -86,6 +88,23 @@ namespace _11_Hard_Calendar
             }
 
             return true;
+        }
+
+        public string GetCalendar(int month, int year)
+        {
+            var output = new StringBuilder(string.Format("Calendar for {0}, {1}", GetMonthName(month), year));
+
+
+            return output.ToString();
+        }
+
+        private string GetMonthName(int month)
+        {
+            return new DateTime(DateTime.Now.Year, month, DateTime.Now.Day).ToString("MMMM");
+            //var now = DateTime.Now;
+            //var date = new DateTime(now.Year, month, now.Day);
+
+            //return date.ToString("MMMM");
         }
     }
 }

@@ -27,7 +27,7 @@ namespace UnitTests
         [Test]
         public void TwoArgsShouldSucceed()
         {
-            var args = new[] { "First", "Second" };
+            var args = new[] { "-m11", "-y2017" };
 
             Assert.IsTrue(_calculator.IsValidCommandLine(args));
         }
@@ -40,6 +40,36 @@ namespace UnitTests
             Assert.IsFalse(_calculator.IsValidCommandLine(args));
         }
 
+        [Test]
+        public void IncorrectFormatMonthParamShouldFail()
+        {
+            var args = new[] { "1", "-y2017" };
 
+            Assert.IsFalse(_calculator.IsValidCommandLine(args));
+        }
+
+        [Test]
+        public void MissingMonthParamShouldFail()
+        {
+            var args = new[] { "-m", "-y2017" };
+
+            Assert.IsFalse(_calculator.IsValidCommandLine(args));
+        }
+
+        [Test]
+        public void NonNumericMonthParamShouldFail()
+        {
+            var args = new[] { "-mFred", "-y2017" };
+
+            Assert.IsFalse(_calculator.IsValidCommandLine(args));
+        }
+
+        [Test]
+        public void InvalidMonthParamShouldFail()
+        {
+            var args = new[] { "-m14", "-y2017" };
+
+            Assert.IsFalse(_calculator.IsValidCommandLine(args));
+        }
     }
 }

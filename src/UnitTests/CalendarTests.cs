@@ -39,6 +39,14 @@ namespace UnitTests
         }
 
         [Test]
+        public void UnsupportedSwitchShouldFail()
+        {
+            var args = new[] { "-z11", "-y2017" };
+
+            Assert.IsFalse(_calculator.IsValidCommandLine(args));
+        }
+
+        [Test]
         public void IncorrectFormatMonthParamShouldFail()
         {
             var args = new[] { "1", "-y2017" };

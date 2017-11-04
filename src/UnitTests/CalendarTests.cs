@@ -14,8 +14,6 @@ namespace UnitTests
             _calculator = new CalendarGenerator();
         }
 
-        // Check for format "-m1 -y2017"
-
         [Test]
         public void LessThanTwoArgsShouldFail()
         {
@@ -68,6 +66,38 @@ namespace UnitTests
         public void InvalidMonthParamShouldFail()
         {
             var args = new[] { "-m14", "-y2017" };
+
+            Assert.IsFalse(_calculator.IsValidCommandLine(args));
+        }
+
+        [Test]
+        public void IncorrectFormatYearParamShouldFail()
+        {
+            var args = new[] { "-m11", "2017" };
+
+            Assert.IsFalse(_calculator.IsValidCommandLine(args));
+        }
+
+        [Test]
+        public void MissingYearParamShouldFail()
+        {
+            var args = new[] { "-m11", "-y" };
+
+            Assert.IsFalse(_calculator.IsValidCommandLine(args));
+        }
+
+        [Test]
+        public void NonNumericYearParamShouldFail()
+        {
+            var args = new[] { "-m12", "-yBob" };
+
+            Assert.IsFalse(_calculator.IsValidCommandLine(args));
+        }
+
+        [Test]
+        public void InvalidYearParamShouldFail()
+        {
+            var args = new[] { "-m12", "-y2100" };
 
             Assert.IsFalse(_calculator.IsValidCommandLine(args));
         }

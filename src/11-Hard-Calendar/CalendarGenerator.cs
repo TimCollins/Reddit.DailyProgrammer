@@ -11,8 +11,14 @@ namespace _11_Hard_Calendar
                 return false;
             }
 
-            int month;
+            int month, year;
             var res = ParseArg(args[0], out month);
+            if (!res)
+            {
+                return false;
+            }
+
+            res = ParseArg(args[1], out year);
 
             return res;
         }
@@ -40,21 +46,46 @@ namespace _11_Hard_Calendar
 
             if (t == "m")
             {
-                if (!int.TryParse(s.Substring(2), out i))
-                {
-                    return false;
-                }
-
-                if (i < 1 || i > 12)
-                {
-                    return false;
-                }
-
-                return true;
+                return DoMonthValidation(s, out i);
             }
 
-            // Fix this to handle the year
-            return int.TryParse(s.Substring(2), out i);
+            return DoYearValidation(s, out i);
+        }
+
+        private bool DoYearValidation(string s, out int i)
+        {
+            if (s.Length < 6)
+            {
+                i = -1;
+                return false;
+            }
+
+            if (!int.TryParse(s.Substring(2, 4), out i))
+            {
+                return false;
+            }
+
+            if (i < 1970 || i > 2038)
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        private static bool DoMonthValidation(string s, out int i)
+        {
+            if (!int.TryParse(s.Substring(2), out i))
+            {
+                return false;
+            }
+
+            if (i < 1 || i > 12)
+            {
+                return false;
+            }
+
+            return true;
         }
     }
 }

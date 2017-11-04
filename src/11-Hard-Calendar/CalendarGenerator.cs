@@ -4,8 +4,7 @@
     {
         public bool IsValidCommandLine(string[] args)
         {
-            // Check for format "-m1 -y2017"
-            return false;
+            return args.Length == 2;
         }
 
         public void ParseArg(string s, out int i)

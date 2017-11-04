@@ -7,6 +7,18 @@ namespace _11_Hard_Calendar
     {
         static void Main(string[] args)
         {
+            var calculator = new CalendarGenerator();
+
+            if (!calculator.IsValidCommandLine(args))
+            {
+                return;
+            }
+
+            int month, year;
+
+            calculator.ParseArg(args[1], out month);
+            calculator.ParseArg(args[2], out year);
+
             // See https://stackoverflow.com/q/2743260/137001
             // for coloured console output.
             Console.WriteLine("Calendar for October, 2017");

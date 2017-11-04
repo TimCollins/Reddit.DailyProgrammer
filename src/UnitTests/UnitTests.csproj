@@ -77,6 +77,10 @@
       <Project>{b8417e60-af69-4e44-ba17-2f143af456f0}</Project>
       <Name>11-Easy-DayOfWeek</Name>
     </ProjectReference>
+    <ProjectReference Include="..\11-Hard-Calendar\11-Hard-Calendar.csproj">
+      <Project>{2bb792fa-e986-4b40-9bfc-d9e222160b2f}</Project>
+      <Name>11-Hard-Calendar</Name>
+    </ProjectReference>
     <ProjectReference Include="..\11-Int-Upside-Up\11-Int-Upside-Up.csproj">
       <Project>{ba7c9840-ba76-402c-893f-78efe41054b7}</Project>
       <Name>11-Int-Upside-Up</Name>

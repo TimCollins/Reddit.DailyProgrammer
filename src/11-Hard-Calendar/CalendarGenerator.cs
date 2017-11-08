@@ -93,7 +93,63 @@ namespace _11_Hard_Calendar
         public string GetCalendar(int month, int year)
         {
             var output = new StringBuilder(string.Format("Calendar for {0}, {1}", GetMonthName(month), year));
+            output.Append("\nMo  Tu  We  Th  Fr  Sa  Su");
+            output.Append("\n--------------------------\n");
 
+            var day = 1;
+            var start = new DateTime(year, month, day);
+            var firstDay = start.DayOfWeek.ToString().Substring(0, 2);
+            var nextMonth = month < 12 ? month + 1 : 1;
+            var lastDayOfMonth = new DateTime(year, nextMonth, 1).AddDays(-1).Day;
+
+            var initialSpaces = 0;
+            if (firstDay == "Tu")
+            {
+                initialSpaces = 1;
+            }
+            else if (firstDay == "We")
+            {
+                initialSpaces = 2;
+            }
+            else if (firstDay == "Th")
+            {
+                initialSpaces = 3;
+            }
+            else if (firstDay == "Fr")
+            {
+                initialSpaces = 4;
+            }
+            else if (firstDay == "Sa")
+            {
+                initialSpaces = 5;
+            }
+            else if (firstDay == "Su")
+            {
+                initialSpaces = 6;
+            }
+
+            for (var i = 0; i < initialSpaces; i++)
+            {
+                output.Append("    ");
+            }
+
+            var cnt = initialSpaces;
+            while (day < lastDayOfMonth)
+            {
+                while (cnt <= 6 && day <= lastDayOfMonth)
+                {
+                    if (day < 10)
+                    {
+                        output.Append(" ");
+                    }
+                    
+                    output.Append(day + "  ");
+                    day++;
+                    cnt++;
+                }
+                output.Append("\n");
+                cnt = 0;
+            }
 
             return output.ToString();
         }
@@ -101,10 +157,6 @@ namespace _11_Hard_Calendar
         private string GetMonthName(int month)
         {
             return new DateTime(DateTime.Now.Year, month, DateTime.Now.Day).ToString("MMMM");
-            //var now = DateTime.Now;
-            //var date = new DateTime(now.Year, month, now.Day);
-
-            //return date.ToString("MMMM");
         }
     }
 }

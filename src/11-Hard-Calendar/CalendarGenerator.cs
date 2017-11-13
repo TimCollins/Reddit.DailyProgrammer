@@ -102,31 +102,7 @@ namespace _11_Hard_Calendar
             var nextMonth = month < 12 ? month + 1 : 1;
             var lastDayOfMonth = new DateTime(year, nextMonth, 1).AddDays(-1).Day;
 
-            var initialSpaces = 0;
-            if (firstDay == "Tu")
-            {
-                initialSpaces = 1;
-            }
-            else if (firstDay == "We")
-            {
-                initialSpaces = 2;
-            }
-            else if (firstDay == "Th")
-            {
-                initialSpaces = 3;
-            }
-            else if (firstDay == "Fr")
-            {
-                initialSpaces = 4;
-            }
-            else if (firstDay == "Sa")
-            {
-                initialSpaces = 5;
-            }
-            else if (firstDay == "Su")
-            {
-                initialSpaces = 6;
-            }
+            var initialSpaces = GetInitialSpaces(firstDay);
 
             for (var i = 0; i < initialSpaces; i++)
             {
@@ -152,6 +128,27 @@ namespace _11_Hard_Calendar
             }
 
             return output.ToString();
+        }
+
+        private int GetInitialSpaces(string firstDay)
+        {
+            switch (firstDay)
+            {
+                case "Tu":
+                    return 1;
+                case "We":
+                    return 2;
+                case "Th":
+                    return 3;
+                case "Fr":
+                    return 4;
+                case "Sa":
+                    return 5;
+                case "Su":
+                    return 6;
+                default:
+                    return 0;
+            }
         }
 
         private string GetMonthName(int month)

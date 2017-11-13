@@ -8,6 +8,11 @@
             // element
             // Given input of length 2, the return should be an array of 2
             // elements. "AB", "BA"
+
+            if (input.Length == 1)
+            {
+                return new[] {input};
+            }
             return null;
         }
     }

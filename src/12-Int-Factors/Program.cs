@@ -11,7 +11,8 @@ namespace _12_Int_Factors
             Console.Write("Please enter a number to display factors for.\n> ");
             var input = Convert.ToInt32(Console.ReadLine());
             var factors = new FactorCalculator().GetFactors(input);
-            
+            factors.Sort();
+
             var output = new StringBuilder(string.Format("The factors of {0} are: ", input));
             output.Append(string.Join(", ", factors));
 

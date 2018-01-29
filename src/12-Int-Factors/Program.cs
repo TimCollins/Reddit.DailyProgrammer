@@ -8,16 +8,16 @@ namespace _12_Int_Factors
     {
         static void Main(string[] args)
         {
-            const int input = 12;
+            Console.Write("Please enter a number to display factors for.\n> ");
+            var input = Convert.ToInt32(Console.ReadLine());
             var factors = new FactorCalculator().GetFactors(input);
-            var output = new StringBuilder(string.Format("{0} = ", input));
-
-            foreach (var i in factors)
-            {
-                output.Append(string.Format("{0} * ", i));
-            }
+            
+            var output = new StringBuilder(string.Format("The factors of {0} are: ", input));
+            output.Append(string.Join(", ", factors));
 
             Console.WriteLine(output.ToString());
+            // See here for a third-party calculator:
+            // http://www.mathwarehouse.com/arithmetic/factorization-calculator.php
             ConsoleUtils.WaitForEscape();
         }
     }

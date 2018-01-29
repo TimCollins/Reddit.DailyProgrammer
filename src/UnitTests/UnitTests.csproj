@@ -42,7 +42,6 @@
     <Compile Include="09-PatternTests.cs" />
     <Compile Include="11-DayOfWeekTests.cs" />
     <Compile Include="12-Factors.cs" />
-    <Compile Include="12-PermutationCalculator.cs" />
     <Compile Include="AlphabeticalCipherTests.cs" />
     <Compile Include="CalendarTests.cs" />
     <Compile Include="CipherTests.cs" />
@@ -90,6 +89,10 @@
     <ProjectReference Include="..\12-Easy-Permutations\12-Easy-Permutations.csproj">
       <Project>{cc996a43-e7bb-4dea-ab09-dc5f7b480586}</Project>
       <Name>12-Easy-Permutations</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\12-Int-Factors\12-Int-Factors.csproj">
+      <Project>{59F91554-CEC7-4259-B4F0-A908A009CDDB}</Project>
+      <Name>12-Int-Factors</Name>
     </ProjectReference>
     <ProjectReference Include="..\2-Easy-Calculator\2-Easy-Calculator.csproj">
       <Project>{9119a8c3-14e7-4036-b3fb-723d561422f2}</Project>

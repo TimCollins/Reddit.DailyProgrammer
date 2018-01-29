@@ -13,15 +13,5 @@ namespace UnitTests
         {
             _calculator = new PermutationCalculator();
         }
-
-        [Test]
-        public void Something()
-        {
-            var input = "A";
-            var result = _calculator.Get(input);
-
-            Assert.IsTrue(result.Length == 1);
-            Assert.AreEqual(result[0], input);
-        }
     }
 }

@@ -2,18 +2,20 @@
 {
     public class PermutationCalculator
     {
-        public string[] Get(string input)
+        public string Get(string prefix, string word)
         {
-            // Given input of length 1, the return should be an array of 1 
-            // element
-            // Given input of length 2, the return should be an array of 2
-            // elements. "AB", "BA"
-
-            if (input.Length == 1)
+            var n = word.Length;
+            if (n == 0)
             {
-                return new[] {input};
+                return prefix;
             }
-            return null;
+
+            for (var i = 0; i < n; i++)
+            {
+                Get(prefix + word[i], word.Substring(0, i) + word.Substring(i + 1, n - (i + 1)));
+            }
+
+            return prefix;
         }
     }
 }

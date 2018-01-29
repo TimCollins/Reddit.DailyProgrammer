@@ -68,6 +68,11 @@ Challenge #11 Intermediate - [Upside Up Numbers](https://www.reddit.com/r/dailyp
 
 Challenge #11 Hard - [Calendar Generator](https://www.reddit.com/r/dailyprogrammer/comments/pwpdz/2192012_challenge_11_difficult/)
 
+Challenge #12 Easy - [String Permutations](https://www.reddit.com/r/dailyprogrammer/comments/pxs2x/2202012_challenge_12_easy/)  
+Note that this doesn't produce the same output as given in the spec. It's not clear what the spec is actually looking for.
+
+Challenge #12 Intermediate - [Number Factors](https://www.reddit.com/r/dailyprogrammer/comments/pxrzh/2202012_challenge_12_intermediate/)
+
 Challenge #183 - [Semantic Version Sort](http://www.reddit.com/r/dailyprogrammer/comments/2igfj9/10062014_challenge_183_easy_semantic_version_sort/)
 
 Incomplete

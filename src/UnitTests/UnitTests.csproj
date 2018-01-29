@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="09-PatternTests.cs" />
     <Compile Include="11-DayOfWeekTests.cs" />
+    <Compile Include="12-Factors.cs" />
     <Compile Include="12-PermutationCalculator.cs" />
     <Compile Include="AlphabeticalCipherTests.cs" />
     <Compile Include="CalendarTests.cs" />

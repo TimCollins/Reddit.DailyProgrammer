@@ -13,8 +13,9 @@ namespace _12_Int_Factors
 
             for (var factor = 1; factor <= max; ++factor)
             {
-                // If the remainder is 0 then add it to the list
-                // and also add
+                // If the remainder is 0 then add the factor to the list
+                // and also add the inverse e.g. starting with 1 so that always gets added
+                // but also add (number / 1) which is just the number itself
                 if (number % factor == 0)
                 {
                     factors.Add(factor);
@@ -24,8 +25,6 @@ namespace _12_Int_Factors
                     }
                 }
             }
-
-            factors.Sort();
 
             return factors;
         }

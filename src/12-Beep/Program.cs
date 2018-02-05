@@ -10,9 +10,19 @@ namespace _12_Beep
             if (args.Length < 1)
             {
                 Console.WriteLine("You must enter some notes!");
+                return;
+            }
+
+            try
+            {
+                new NotePlayer().Play(args);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("There was a problem playing the specified notes");
+                Console.WriteLine(ex.Message);
             }
             
-            new NotePlayer().Play(args);
             ConsoleUtils.WaitForEscape();
         }
     }

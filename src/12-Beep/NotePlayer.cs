@@ -35,7 +35,7 @@ namespace _12_Beep
                 case "G":
                     return 784;
                 default:
-                    throw new ApplicationException(string.Format("Invalid note {0} specified.", note));
+                    throw new ApplicationException(string.Format("Invalid or unsupported note \"{0}\" specified.", note));
             }
         }
     }

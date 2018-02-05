@@ -56,7 +56,7 @@ Challenge #9 Easy - [Sorting](http://www.reddit.com/r/dailyprogrammer/comments/p
 
 Challenge #9 Intermediate - [String Replacer](http://www.reddit.com/r/dailyprogrammer/comments/pu1y6/2172012_challenge_9_intermediate/)
 
-Challenge #9 Hard - [Pattern Generator](https://www.reddit.com/r/dailyprogrammer/comments/pu2c0/2172012_challenge_9_difficult/)
+Challenge #9 Difficult - [Pattern Generator](https://www.reddit.com/r/dailyprogrammer/comments/pu2c0/2172012_challenge_9_difficult/)
 
 Challenge #10 Easy - [Phone Number Validation](https://www.reddit.com/r/dailyprogrammer/comments/pv98f/2182012_challenge_10_easy/)
 
@@ -66,12 +66,14 @@ Challenge #11 Easy - [Day of the Week Calculator](https://www.reddit.com/r/daily
 
 Challenge #11 Intermediate - [Upside Up Numbers](https://www.reddit.com/r/dailyprogrammer/comments/pwox3/2192012_challenge_11_intermediate/)
 
-Challenge #11 Hard - [Calendar Generator](https://www.reddit.com/r/dailyprogrammer/comments/pwpdz/2192012_challenge_11_difficult/)
+Challenge #11 Difficult - [Calendar Generator](https://www.reddit.com/r/dailyprogrammer/comments/pwpdz/2192012_challenge_11_difficult/)
 
 Challenge #12 Easy - [String Permutations](https://www.reddit.com/r/dailyprogrammer/comments/pxs2x/2202012_challenge_12_easy/)  
 Note that this doesn't produce the same output as given in the spec. It's not clear what the spec is actually looking for.
 
 Challenge #12 Intermediate - [Number Factors](https://www.reddit.com/r/dailyprogrammer/comments/pxrzh/2202012_challenge_12_intermediate/)
+
+Challenge #12 Difficult - [Musical Notes](https://www.reddit.com/r/dailyprogrammer/comments/pxsew/2202012_challenge_12_difficult/)
 
 Challenge #183 - [Semantic Version Sort](http://www.reddit.com/r/dailyprogrammer/comments/2igfj9/10062014_challenge_183_easy_semantic_version_sort/)
 

@@ -42,6 +42,7 @@
     <Compile Include="09-PatternTests.cs" />
     <Compile Include="11-DayOfWeekTests.cs" />
     <Compile Include="12-Factors.cs" />
+    <Compile Include="12-NoteTests.cs" />
     <Compile Include="AlphabeticalCipherTests.cs" />
     <Compile Include="CalendarTests.cs" />
     <Compile Include="CipherTests.cs" />
@@ -85,6 +86,10 @@
     <ProjectReference Include="..\11-Int-Upside-Up\11-Int-Upside-Up.csproj">
       <Project>{ba7c9840-ba76-402c-893f-78efe41054b7}</Project>
       <Name>11-Int-Upside-Up</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\12-Beep\12-Beep.csproj">
+      <Project>{014b58c2-ceef-4d95-a837-a2bdf3b96f5e}</Project>
+      <Name>12-Beep</Name>
     </ProjectReference>
     <ProjectReference Include="..\12-Easy-Permutations\12-Easy-Permutations.csproj">
       <Project>{cc996a43-e7bb-4dea-ab09-dc5f7b480586}</Project>

@@ -75,6 +75,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12-Int-Factors", "12-Int-Fa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12-Beep", "12-Beep\12-Beep.csproj", "{014B58C2-CEEF-4D95-A837-A2BDF3B96F5E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13-Easy-DayNumber", "13-Easy-DayNumber\13-Easy-DayNumber.csproj", "{E8245F87-F38D-412E-BFB1-B86792FFDDEE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -225,6 +227,10 @@ Global
 		{014B58C2-CEEF-4D95-A837-A2BDF3B96F5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{014B58C2-CEEF-4D95-A837-A2BDF3B96F5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{014B58C2-CEEF-4D95-A837-A2BDF3B96F5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8245F87-F38D-412E-BFB1-B86792FFDDEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8245F87-F38D-412E-BFB1-B86792FFDDEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8245F87-F38D-412E-BFB1-B86792FFDDEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8245F87-F38D-412E-BFB1-B86792FFDDEE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

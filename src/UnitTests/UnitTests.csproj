@@ -43,6 +43,7 @@
     <Compile Include="11-DayOfWeekTests.cs" />
     <Compile Include="12-Factors.cs" />
     <Compile Include="12-NoteTests.cs" />
+    <Compile Include="13-DayNumberTests.cs" />
     <Compile Include="AlphabeticalCipherTests.cs" />
     <Compile Include="CalendarTests.cs" />
     <Compile Include="CipherTests.cs" />

@@ -23,20 +23,22 @@ namespace UnitTests
             Assert.Throws<ApplicationException>(() => _player.Play(input));
         }
 
-        [Test]
-        public void SupportedNotesShouldNotThrowException()
-        {
-            string[] input = { "a", "b", "c", "d", "e", "f", "g" };
+        // These tests work but they slow down the test runner and are noisy so I'm excluding them
+        // for now
+        //[Test]
+        //public void SupportedNotesShouldNotThrowException()
+        //{
+        //    string[] input = { "a", "b", "c", "d", "e", "f", "g" };
 
-            _player.Play(input);
-        }
+        //    _player.Play(input);
+        //}
 
-        [Test]
-        public void NoteCaseDoesNotAffectOutput()
-        {
-            string[] input = { "A", "B", "C", "D", "E", "F", "G" };
+        //[Test]
+        //public void NoteCaseDoesNotAffectOutput()
+        //{
+        //    string[] input = { "A", "B", "C", "D", "E", "F", "G" };
 
-            _player.Play(input);
-        }
+        //    _player.Play(input);
+        //}
     }
 }

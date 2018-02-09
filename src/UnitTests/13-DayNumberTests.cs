@@ -18,7 +18,7 @@ namespace UnitTests
         [Test]
         public void January1ShouldReturn1()
         {
-            var input = new DateTime(2018, 1, 1);
+            const string input = "2018/1/1";
             var output = _calculator.GetDayNumber(input);
 
             Assert.AreEqual(1, output);
@@ -27,7 +27,7 @@ namespace UnitTests
         [Test]
         public void December31ShouldReturn365()
         {
-            var input = new DateTime(2018, 12, 31);
+            const string input = "2018/12/31";
             var output = _calculator.GetDayNumber(input);
 
             Assert.AreEqual(365, output);
@@ -36,10 +36,30 @@ namespace UnitTests
         [Test]
         public void DayNumberShouldWorkForPreviousYear()
         {
-            var input = new DateTime(2017, 12, 31);
+            const string input = "2017/12/31";
             var output = _calculator.GetDayNumber(input);
 
             Assert.AreEqual(365, output);
+        }
+
+        [Test]
+        public void InvalidDateStringShouldDisplayError()
+        {
+            const string input = "2018/1";
+            Assert.Throws<ApplicationException>(() => _calculator.GetDayNumber(input));
+        }
+
+        [Test]
+        public void InvalidDateFormatStringShouldDisplayError()
+        {
+            const string input = "2018/1/57";
+            Assert.Throws<ArgumentOutOfRangeException>(() => _calculator.GetDayNumber(input));
+        }
+
+        [Test]
+        public void EmptyStringShouldSomething()
+        {
+            Assert.Throws<ApplicationException>(() => _calculator.GetDayNumber(string.Empty));
         }
     }
 }

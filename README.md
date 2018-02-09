@@ -75,7 +75,9 @@ Challenge #12 Intermediate - [Number Factors](https://www.reddit.com/r/dailyprog
 
 Challenge #12 Difficult - [Musical Notes](https://www.reddit.com/r/dailyprogrammer/comments/pxsew/2202012_challenge_12_difficult/)
 
-Challenge #13 Easy - [Day Number](https://www.reddit.com/r/dailyprogrammer/comments/pzo4w/2212012_challenge_13_easy/)  
+Challenge #13 Easy - [Day Number](https://www.reddit.com/r/dailyprogrammer/comments/pzo4w/2212012_challenge_13_easy/)
+
+Challenge #13 Intermediate - [Reverse and Write a String](https://www.reddit.com/r/dailyprogrammer/comments/pzo7g/2212012_challenge_13_intermediate/)
 
 Challenge #183 - [Semantic Version Sort](http://www.reddit.com/r/dailyprogrammer/comments/2igfj9/10062014_challenge_183_easy_semantic_version_sort/)
 

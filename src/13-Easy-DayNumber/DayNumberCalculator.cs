@@ -13,7 +13,7 @@ namespace _13_Easy_DayNumber
         {
             if (!Parse(input))
             {
-                return -1;
+                throw new ApplicationException("Invalid input format");
             }
 
             try
@@ -54,7 +54,7 @@ namespace _13_Easy_DayNumber
             return true;
         }
 
-        public int GetDayNumber(DateTime date)
+        private int GetDayNumber(DateTime date)
         {
             var yearEnd = new DateTime(date.Year, 12, 31);
             var ts = yearEnd - date;

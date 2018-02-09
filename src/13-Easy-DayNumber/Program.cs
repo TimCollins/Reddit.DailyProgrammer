@@ -20,8 +20,16 @@ namespace _13_Easy_DayNumber
                 return;
             }
 
-            var output = calculator.GetDayNumber(args[0]);
-            Console.WriteLine("Day number for {0} is {1}", args[0], output);
+            try
+            {
+                var output = calculator.GetDayNumber(args[0]);
+                Console.WriteLine("Day number for {0} is {1}", args[0], output);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            
             ConsoleUtils.WaitForEscape();
         }
     }

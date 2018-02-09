@@ -100,6 +100,10 @@
       <Project>{59F91554-CEC7-4259-B4F0-A908A009CDDB}</Project>
       <Name>12-Int-Factors</Name>
     </ProjectReference>
+    <ProjectReference Include="..\13-Easy-DayNumber\13-Easy-DayNumber.csproj">
+      <Project>{E8245F87-F38D-412E-BFB1-B86792FFDDEE}</Project>
+      <Name>13-Easy-DayNumber</Name>
+    </ProjectReference>
     <ProjectReference Include="..\2-Easy-Calculator\2-Easy-Calculator.csproj">
       <Project>{9119a8c3-14e7-4036-b3fb-723d561422f2}</Project>
       <Name>2-Easy-Calculator</Name>

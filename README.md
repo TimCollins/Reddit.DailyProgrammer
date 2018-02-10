@@ -79,6 +79,8 @@ Challenge #13 Easy - [Day Number](https://www.reddit.com/r/dailyprogrammer/comme
 
 Challenge #13 Intermediate - [Reverse and Write a String](https://www.reddit.com/r/dailyprogrammer/comments/pzo7g/2212012_challenge_13_intermediate/)
 
+Challenge #13 Hard - [Rock Paper Scissors with Optional Weighting](https://www.reddit.com/r/dailyprogrammer/comments/pzobz/2212012_challenge_13_difficult/)
+
 Challenge #183 - [Semantic Version Sort](http://www.reddit.com/r/dailyprogrammer/comments/2igfj9/10062014_challenge_183_easy_semantic_version_sort/)
 
 Incomplete

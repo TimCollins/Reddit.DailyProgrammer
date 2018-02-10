@@ -10,6 +10,9 @@ namespace _13_Hard_RPS
             // input. The computer should play against itself. Make the program keep score, 
             // and for extra credit, give the option to "weigh" the chances, so one AI will 
             // win more often.
+
+            var rps = new RockPaperScissors(100);
+            rps.Play();
             ConsoleUtils.WaitForEscape();
         }
     }

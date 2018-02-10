@@ -10,8 +10,8 @@ namespace _13_Hard_RPS
         private int _draws;
         private int _p1Wins;
         private int _p2Wins;
-
-
+        private bool _applyWeighting;
+        
         public RockPaperScissors()
         {
             _maxGames = 100;
@@ -25,6 +25,7 @@ namespace _13_Hard_RPS
             _draws = 0;
             _p1Wins = 0;
             _p2Wins = 0;
+            _applyWeighting = true;
         }
 
         /// <summary>
@@ -48,6 +49,11 @@ namespace _13_Hard_RPS
                 var p1Guess = Choose();
                 var p2Guess = Choose();
                 var result = Evaluate(p1Guess, p2Guess);
+
+                if (_applyWeighting)
+                {
+                    result = ApplyWeighting(counter, result);
+                }
                 UpdateStats(result);
                 var resultStr = Parse(result);
 
@@ -56,6 +62,26 @@ namespace _13_Hard_RPS
             }
 
             DisplayStats();
+        }
+
+        /// <summary>
+        /// Ensure player 1 wins more often by changing the result for every 10th game
+        /// if player 1 didn't win it. This should result in a win percentage around 40%
+        /// where it is around 30% normally.
+        /// </summary>
+        private string ApplyWeighting(int counter, string result)
+        {
+            if (result == "p1")
+            {
+                return result;
+            }
+
+            if (counter % 10 == 0)
+            {
+                result = "p1";
+            }
+
+            return result;
         }
 
         private void DisplayStats()

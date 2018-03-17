@@ -6,10 +6,13 @@ namespace _14_Hard_ThreadedSort
     {
         //private const int SizeLimit = 1000000;
         private const int SizeLimit = 100;
-        private const int NumberLimit = 100;
+        private const int NumberLimit = 1000;
         private int[] _numbers;
+
         public void Generate()
         {
+            //_numbers = GetKnownData();
+            //return;
             _numbers = new int[SizeLimit];
             var r = new Random();
 
@@ -19,9 +22,36 @@ namespace _14_Hard_ThreadedSort
             }
         }
 
+        private int[] GetKnownData()
+        {
+            return new[] {5, 1, 4, 2, 8, 3};
+        }
+
         public void Sort()
         {
-            // throw new System.NotImplementedException();
+            BubbleSort();
+        }
+
+        private void BubbleSort()
+        {
+            var length = _numbers.Length;
+            bool swapHasTakenPlace;
+
+            do
+            {
+                swapHasTakenPlace = false;
+
+                for (var i = 1; i < length; i++)
+                {
+                    if (_numbers[i - 1] > _numbers[i])
+                    {
+                        var tmp = _numbers[i - 1];
+                        _numbers[i - 1] = _numbers[i];
+                        _numbers[i] = tmp;
+                        swapHasTakenPlace = true;
+                    }
+                }
+            } while (swapHasTakenPlace);
         }
 
         public void Display()

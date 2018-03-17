@@ -14,6 +14,7 @@ namespace _14_Hard_ThreadedSort
             // Also look for the max number
             var ts = new ThreadedSort();
             ts.Generate();
+            ts.Display();
             ts.Sort();
             ts.Display();
 

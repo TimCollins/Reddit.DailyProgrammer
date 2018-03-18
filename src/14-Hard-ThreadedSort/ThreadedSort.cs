@@ -11,8 +11,6 @@ namespace _14_Hard_ThreadedSort
 
         public void Generate()
         {
-            //_numbers = GetKnownData();
-            //return;
             _numbers = new int[SizeLimit];
             var r = new Random();
 
@@ -20,11 +18,6 @@ namespace _14_Hard_ThreadedSort
             {
                 _numbers[i] = r.Next(1, NumberLimit);
             }
-        }
-
-        private int[] GetKnownData()
-        {
-            return new[] {5, 1, 4, 2, 8, 3};
         }
 
         public void Sort()

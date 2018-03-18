@@ -93,3 +93,6 @@ Challenge #6 Intermediate - [Duplicate String Removal ](http://www.reddit.com/r/
 
 Challenge #7 Difficult - [Reddit Login Bot](http://www.reddit.com/r/dailyprogrammer/comments/pr4vo/2152012_challenge_7_difficult/)  
 **Reason:** Looks like an interesting project but I don't have a Reddit login.
+
+Challenge #14 Hard - [Multi-threaded Sort](https://www.reddit.com/r/dailyprogrammer/comments/q2kbt/2232012_challenge_14_difficult/)
+**Reason:** I don't understand threading enough to be able to implement any algorithms I find.

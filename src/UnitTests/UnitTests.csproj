@@ -45,6 +45,7 @@
     <Compile Include="12-NoteTests.cs" />
     <Compile Include="13-DayNumberTests.cs" />
     <Compile Include="14-Sieve-Tests.cs" />
+    <Compile Include="14-Easy-BlockTests.cs" />
     <Compile Include="AlphabeticalCipherTests.cs" />
     <Compile Include="CalendarTests.cs" />
     <Compile Include="CipherTests.cs" />
@@ -104,6 +105,10 @@
     <ProjectReference Include="..\13-Easy-DayNumber\13-Easy-DayNumber.csproj">
       <Project>{E8245F87-F38D-412E-BFB1-B86792FFDDEE}</Project>
       <Name>13-Easy-DayNumber</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\14-Easy\14-Easy.csproj">
+      <Project>{D126D439-8DEC-4BBE-9FD9-08144790FDB2}</Project>
+      <Name>14-Easy</Name>
     </ProjectReference>
     <ProjectReference Include="..\14-Int-Sieve\14-Int-Sieve.csproj">
       <Project>{74D4688C-0DE9-4A14-B1E4-4DB6BB2A6D54}</Project>

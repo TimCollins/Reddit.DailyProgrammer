@@ -85,6 +85,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "14-Hard-ThreadedSort", "14-
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "14-Int-Sieve", "14-Int-Sieve\14-Int-Sieve.csproj", "{74D4688C-0DE9-4A14-B1E4-4DB6BB2A6D54}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "14-Easy", "14-Easy\14-Easy.csproj", "{D126D439-8DEC-4BBE-9FD9-08144790FDB2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -255,6 +257,10 @@ Global
 		{74D4688C-0DE9-4A14-B1E4-4DB6BB2A6D54}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{74D4688C-0DE9-4A14-B1E4-4DB6BB2A6D54}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{74D4688C-0DE9-4A14-B1E4-4DB6BB2A6D54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D126D439-8DEC-4BBE-9FD9-08144790FDB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D126D439-8DEC-4BBE-9FD9-08144790FDB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D126D439-8DEC-4BBE-9FD9-08144790FDB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D126D439-8DEC-4BBE-9FD9-08144790FDB2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
